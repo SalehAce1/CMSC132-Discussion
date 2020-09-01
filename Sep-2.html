@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>9/2 Discussion &mdash; CMSC132 Fall 2020 Discussion Notes 1.0.0 documentation</title>
+  <title>9/2 Intro/Using Eclipse &mdash; CMSC132 Fall 2020 Discussion Notes 1.0.0 documentation</title>
   
 
   
@@ -82,7 +82,42 @@
             
             
               <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">9/2 Discussion</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">9/2 Intro/Using Eclipse</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#about-me">About me</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#class-structure">Class Structure</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#lectures-and-discussions">Lectures and Discussions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#exams-quizzes-and-projects">Exams, Quizzes, and Projects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#questions">Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#using-eclipse">Using Eclipse</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#creating-a-new-java-project">Creating a New Java Project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#adding-a-class-to-our-project">Adding a Class to our Project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#importing-and-exporting-archive-files">Importing and Exporting Archive files</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#importing">Importing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#exporting">Exporting</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#review">Review</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#main-method">Main Method</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#conditions-and-loops">Conditions and Loops</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#classes-and-common-methods">Classes and Common Methods</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#constructors">Constructors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tostring">toString()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#equals">equals()</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#static-variables-and-methods">Static Variables and Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mutable-vs-immutable">Mutable vs Immutable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#shallow-vs-deep-vs-reference-copy">Shallow vs Deep vs Reference Copy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stringbuffer">StringBuffer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#arrays">Arrays</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
             
@@ -129,7 +164,7 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>9/2 Discussion</li>
+      <li>9/2 Intro/Using Eclipse</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -148,9 +183,162 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="discussion">
-<h1>9/2 Discussion<a class="headerlink" href="#discussion" title="Permalink to this headline">¶</a></h1>
-<p>Hi people</p>
+  <div class="section" id="intro-using-eclipse">
+<h1>9/2 Intro/Using Eclipse<a class="headerlink" href="#intro-using-eclipse" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="about-me">
+<h2>About me<a class="headerlink" href="#about-me" title="Permalink to this headline">¶</a></h2>
+<p>My name is Seyed Mohammad Ghaemi and I am sophomore majoring in computer science: machine learning.
+You can contact me through email with <a class="reference external" href="mailto:sghaemi1&#37;&#52;&#48;umd&#46;edu">sghaemi1<span>&#64;</span>umd<span>&#46;</span>edu</a>.
+I enjoy programming Hollow Knight mods and <a class="reference external" href="https://radiance.host/apidocs/">have previously helped make tutorials for it too</a>.</p>
+</div>
+<div class="section" id="class-structure">
+<h2>Class Structure<a class="headerlink" href="#class-structure" title="Permalink to this headline">¶</a></h2>
+<p>I will briefly go over the different components of this class.
+For a more in-depth look, <a class="reference external" href="https://www.cs.umd.edu/class/fall2020/cmsc132/">check out the class site here</a>.</p>
+<div class="section" id="lectures-and-discussions">
+<h3>Lectures and Discussions<a class="headerlink" href="#lectures-and-discussions" title="Permalink to this headline">¶</a></h3>
+<p>Lectures are prerecorded and take place on Mondays, Wednesdays, and Fridays. The class’s main topics will be taught through lectures.</p>
+<p>Discussions (or labs) are live and take place on Mondays and Wednesdays. Discussions will mainly go over smaller topics and review content taught in lectures.
+If we have extra time before class ends, I will go around helping different people with problems they may be having in the class.</p>
+</div>
+<div class="section" id="exams-quizzes-and-projects">
+<h3>Exams, Quizzes, and Projects<a class="headerlink" href="#exams-quizzes-and-projects" title="Permalink to this headline">¶</a></h3>
+<p>These assignments are open-note and open-book (you can look at slides and old code) but they are not cooperative activties.
+Most of them will involve writing code for a program and sending it to the <a class="reference external" href="https://submit.cs.umd.edu/">submit server for grading</a>. One exception to this is
+the debug quiz on week 6 (more details on this later).</p>
+</div>
+<div class="section" id="questions">
+<h3>Questions<a class="headerlink" href="#questions" title="Permalink to this headline">¶</a></h3>
+<p>Ask specific questions relating to code you have written through Office Hours, and general/clarification questions through Piazza.</p>
+</div>
+</div>
+<div class="section" id="using-eclipse">
+<h2>Using Eclipse<a class="headerlink" href="#using-eclipse" title="Permalink to this headline">¶</a></h2>
+<p>You should have the right version of Eclipse and Java installed, if not, <a class="reference external" href="https://www.cs.umd.edu/eclipse/">be sure to use the following link to do so</a>.</p>
+<div class="section" id="creating-a-new-java-project">
+<h3>Creating a New Java Project<a class="headerlink" href="#creating-a-new-java-project" title="Permalink to this headline">¶</a></h3>
+<p>In Eclipse, go to File -&gt; New -&gt; Project -&gt; Click on the Java folder -&gt; Java Project</p>
+<div class="figure align-default" id="id1">
+<a class="reference internal image-reference" href="_images/1Ec.PNG"><img alt="_images/1Ec.PNG" src="_images/1Ec.PNG" style="width: 414.75px; height: 426.0px;" /></a>
+<p class="caption"><span class="caption-text">Figure 1: Screenshot of the new project location. Note that you may be able to choose “Java Project” after choosing “New.”</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="id2">
+<a class="reference internal image-reference" href="_images/2Ec.PNG"><img alt="_images/2Ec.PNG" src="_images/2Ec.PNG" style="width: 382.5px; height: 371.25px;" /></a>
+<p class="caption"><span class="caption-text">Figure 2: Screenshot of the page where you get to select a new java project.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>Fill in the “Project name” option with whatever name you like. Eclipse gives you the option to decide
+if you want your source files (code you write) and class files to be separate through the “Project layout” option.
+We choose to separate the two into different folders by selecting the second option. Click “Finish” to create the new project.</p>
+<div class="figure align-default" id="id3">
+<a class="reference internal image-reference" href="_images/3Ec.PNG"><img alt="_images/3Ec.PNG" src="_images/3Ec.PNG" style="width: 551.25px; height: 537.0px;" /></a>
+<p class="caption"><span class="caption-text">Figure 3: The final page for creating a new project.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Eclipse may ask you to create a module (a new feature from Java 13). We will not be covering them in this class
+so if asked choose “Don’t create.”</p>
+</div>
+</div>
+<div class="section" id="adding-a-class-to-our-project">
+<h3>Adding a Class to our Project<a class="headerlink" href="#adding-a-class-to-our-project" title="Permalink to this headline">¶</a></h3>
+<p>You can create a class by right-clicking on the “src” folder in the <strong>Package Explorer</strong> and choosing New -&gt; Class.</p>
+<div class="figure align-default" id="id4">
+<a class="reference internal image-reference" href="_images/4Ec.PNG"><img alt="_images/4Ec.PNG" src="_images/4Ec.PNG" style="width: 672.0px; height: 348.75px;" /></a>
+<p class="caption"><span class="caption-text">Figure 4: Options you must choose to create a new class.</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<p>This will open the <strong>New Java Class</strong> dialogue box. Type in the name of your class in the “Name:” option.
+We will want to select the <code class="code docutils literal notranslate"><span class="pre">public</span> <span class="pre">static</span> <span class="pre">void</span> <span class="pre">main(String</span> <span class="pre">args[])</span></code> option as well since we want to make a main method.</p>
+<div class="figure align-default" id="id5">
+<a class="reference internal image-reference" href="_images/5Ec.PNG"><img alt="_images/5Ec.PNG" src="_images/5Ec.PNG" style="width: 394.5px; height: 471.0px;" /></a>
+<p class="caption"><span class="caption-text">Figure 5: The New Java Class dialogue box.</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<p>This is what my class looked like:</p>
+<div class="highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Printer</span>
+<span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hello CMSC132!&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="importing-and-exporting-archive-files">
+<h3>Importing and Exporting Archive files<a class="headerlink" href="#importing-and-exporting-archive-files" title="Permalink to this headline">¶</a></h3>
+<p>Importing zip files is done to open up example code and coding projects. Exporting is done when you wish to submit
+your code to the submit server.</p>
+<div class="figure align-default" id="id6">
+<a class="reference internal image-reference" href="_images/6Ec.PNG"><img alt="_images/6Ec.PNG" src="_images/6Ec.PNG" style="width: 254.25px; height: 426.0px;" /></a>
+<p class="caption"><span class="caption-text">Figure 6: Location of Import and Export in the File menu.</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="importing">
+<h4>Importing<a class="headerlink" href="#importing" title="Permalink to this headline">¶</a></h4>
+<p>To import, go to File -&gt; Import -&gt; General -&gt; Existing Projects into Workspace -&gt; Select archive File.
+I will be importing the <strong>Review.zip</strong> file in the schedule page of the class website.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Be sure not to choose <strong>Archive File</strong> even though that may sound like the right option. Choose <strong>Existing Projects into Workspace</strong>.</p>
+</div>
+<div class="figure align-default" id="id7">
+<a class="reference internal image-reference" href="_images/7Ec.PNG"><img alt="_images/7Ec.PNG" src="_images/7Ec.PNG" style="width: 383.25px; height: 406.5px;" /></a>
+<p class="caption"><span class="caption-text">Figure 7: The first import dialogue box.</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="id8">
+<a class="reference internal image-reference" href="_images/8Ec.PNG"><img alt="_images/8Ec.PNG" src="_images/8Ec.PNG" style="width: 378.75px; height: 526.5px;" /></a>
+<p class="caption"><span class="caption-text">Figure 8: Choose the <strong>Select archive File</strong> option and browse to your zip file.</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="exporting">
+<h4>Exporting<a class="headerlink" href="#exporting" title="Permalink to this headline">¶</a></h4>
+<p>To export, go to File -&gt; Export -&gt; General -&gt; Archive File</p>
+<div class="figure align-default" id="id9">
+<a class="reference internal image-reference" href="_images/9Ec.PNG"><img alt="_images/9Ec.PNG" src="_images/9Ec.PNG" style="width: 454.5px; height: 459.0px;" /></a>
+<p class="caption"><span class="caption-text">Figure 9: Choose <strong>Archive File</strong> in the Export diologue box.</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="id10">
+<a class="reference internal image-reference" href="_images/10Ec.PNG"><img alt="_images/10Ec.PNG" src="_images/10Ec.PNG" style="width: 454.5px; height: 459.0px;" /></a>
+<p class="caption"><span class="caption-text">Figure 10: Select your project then click browse to choose where you want the file to be exported to.</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="review">
+<h2>Review<a class="headerlink" href="#review" title="Permalink to this headline">¶</a></h2>
+<p>The rest of this discussion covered the content of the <strong>Review.zip</strong> file.</p>
+<div class="section" id="main-method">
+<h3>Main Method<a class="headerlink" href="#main-method" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="conditions-and-loops">
+<h3>Conditions and Loops<a class="headerlink" href="#conditions-and-loops" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="classes-and-common-methods">
+<h3>Classes and Common Methods<a class="headerlink" href="#classes-and-common-methods" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="constructors">
+<h4>Constructors<a class="headerlink" href="#constructors" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="tostring">
+<h4>toString()<a class="headerlink" href="#tostring" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="equals">
+<h4>equals()<a class="headerlink" href="#equals" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+<div class="section" id="static-variables-and-methods">
+<h3>Static Variables and Methods<a class="headerlink" href="#static-variables-and-methods" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="mutable-vs-immutable">
+<h3>Mutable vs Immutable<a class="headerlink" href="#mutable-vs-immutable" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="shallow-vs-deep-vs-reference-copy">
+<h3>Shallow vs Deep vs Reference Copy<a class="headerlink" href="#shallow-vs-deep-vs-reference-copy" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="stringbuffer">
+<h3>StringBuffer<a class="headerlink" href="#stringbuffer" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="arrays">
+<h3>Arrays<a class="headerlink" href="#arrays" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
 </div>
 
 
