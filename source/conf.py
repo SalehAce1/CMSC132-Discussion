@@ -22,7 +22,7 @@
 
 project = u'CMSC132 Fall 2020 Discussion Notes'
 copyright = u'2020'
-author = u'Seyed Mohammad Ghaemi'
+author = u'CMSC132 TAs'
 
 # The short X.Y version
 version = u''

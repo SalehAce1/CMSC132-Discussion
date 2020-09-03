@@ -4,9 +4,9 @@
 # You can set these variables from the command line.
 SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
-SPHINXPROJ    = HollowKnightModdingApi
+SPHINXPROJ    = CMSC132DiscNotes
 SOURCEDIR     = .
-BUILDDIR      = _build
+BUILDDIR      = ../docs
 
 # Put it first so that "make" without argument is like "make help".
 help:
@@ -17,4 +17,10 @@ help:
 # Catch-all target: route all unknown targets to Sphinx using the new
 # "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
 %: Makefile
+	echo "Touching everything."
+	find . -type f -exec touch {} +
+	echo "Done touching."
 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+	echo "Moving from ../docs/html to ../docs."
+	cp -r ../docs/html/* ../docs && rm -R ../docs/html
+	echo "Done moving."
