@@ -1,0 +1,288 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>9/14 Inheritance and JUnit Testing &mdash; CMSC132 Fall 2020 Discussion Notes 1.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="9/2 Debugging" href="Sep-9.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> CMSC132 Fall 2020 Discussion Notes
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Sep-2.html">9/2 Intro/Using Eclipse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sep-9.html">9/2 Debugging</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">9/14 Inheritance and JUnit Testing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#reminders">Reminders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#inheritance-review">Inheritance Review</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overriding">Overriding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#private-and-protected">Private and Protected</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#early-and-late-binding">Early and Late Binding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#getclass-and-instanceof">getClass() and instanceof</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#upcast-and-downcast">Upcast and Downcast</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#junit-tests">Junit Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rest-of-class">Rest of Class</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">CMSC132 Fall 2020 Discussion Notes</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>9/14 Inheritance and JUnit Testing</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/Sep-14.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="inheritance-and-junit-testing">
+<h1>9/14 Inheritance and JUnit Testing<a class="headerlink" href="#inheritance-and-junit-testing" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="reminders">
+<h2>Reminders<a class="headerlink" href="#reminders" title="Permalink to this headline">¶</a></h2>
+<p>Remember that there will be a quiz on Wednesday (Sep-16). All information about the quiz <a class="reference external" href="https://www.cs.umd.edu/class/fall2020/cmsc132/quizzes.shtml">can be found here.</a></p>
+<p>Don’t forget that project 1 is due today! If you have not already, make at least one submission so you know the submit server is working for you.</p>
+</div>
+<div class="section" id="inheritance-review">
+<h2>Inheritance Review<a class="headerlink" href="#inheritance-review" title="Permalink to this headline">¶</a></h2>
+<p>If a <strong>Student</strong> <em>is a</em> (or extends) <strong>Person</strong>, then that means the <strong>Student</strong> will inherit all fields and methods of its parent, <strong>Person</strong>.
+Inside of the <strong>Student</strong> class, we use the keyword <em>super</em> to refer to the parent. Remember that when we initialize a child class, its parent’s constructor
+is run first, then the child’s constructor.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Object class is at the top of the inheritance hierarchy and includes methods such as toString() and equals(Object o).</p>
+</div>
+<div class="section" id="overriding">
+<h3>Overriding<a class="headerlink" href="#overriding" title="Permalink to this headline">¶</a></h3>
+<p>We can <em>override</em> a method a child inherits from a parent thus redefining how it functions within the child.
+Do this by adding the method with the same exact name and parameter types in the child.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Do not mix up <em>overriding</em> (redefining an inherited method) and <em>overloading</em> (having multiple versions of the same method distinguished by parameter difference).</p>
+</div>
+</div>
+<div class="section" id="private-and-protected">
+<h3>Private and Protected<a class="headerlink" href="#private-and-protected" title="Permalink to this headline">¶</a></h3>
+<p>While <em>private</em> methods are inherited, they cannot be accessed from the child. We can use the <em>protected</em> keyword to allow
+a class’s children to access its fields without giving access to other classes.</p>
+</div>
+<div class="section" id="early-and-late-binding">
+<h3>Early and Late Binding<a class="headerlink" href="#early-and-late-binding" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Assume Student extends Person</span>
+<span class="n">Student</span> <span class="n">sid</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Student</span><span class="p">(</span><span class="mi">132</span><span class="p">);</span>
+<span class="n">Person</span> <span class="n">p</span> <span class="o">=</span> <span class="n">sid</span><span class="p">;</span>
+<span class="c1">// Does p.toString() run Student&#39;s version or Person&#39;s version?</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+</pre></div>
+</div>
+<p><em>Early binding</em> is when we choose which method is run based on what the variable is declared as (p is declared as <strong>Person</strong>)
+and not what it actually is (p is more specifically a <strong>Student</strong>).</p>
+<p><em>Late binding</em> (which Java uses) is when we run the version of the method based on the class it really is, in this case, <strong>Student</strong>.
+Late binding means that we can store an array of different classes under the same parent method.</p>
+</div>
+<div class="section" id="getclass-and-instanceof">
+<h3>getClass() and instanceof<a class="headerlink" href="#getclass-and-instanceof" title="Permalink to this headline">¶</a></h3>
+<p><code class="code docutils literal notranslate"><span class="pre">a.getClass()</span></code> returns the class of object “a”. <code class="code docutils literal notranslate"><span class="pre">a</span> <span class="pre">instanceof</span> <span class="pre">ClassType</span></code> checks whether “a <em>is a</em> ClassType”.</p>
+</div>
+<div class="section" id="upcast-and-downcast">
+<h3>Upcast and Downcast<a class="headerlink" href="#upcast-and-downcast" title="Permalink to this headline">¶</a></h3>
+<p>Upcasting is going from a child to a parent, Java does this automatically. Downcasting is going from a parent to a child.
+This must be done manually and Java will break if one attempts to cast a parent to a child it does not have.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Use <em>instanceof</em> to check whether downcasting is safe.</p>
+</div>
+</div>
+</div>
+<div class="section" id="junit-tests">
+<h2>Junit Tests<a class="headerlink" href="#junit-tests" title="Permalink to this headline">¶</a></h2>
+<p>Learn how to make your <a class="reference external" href="https://www.cs.umd.edu/eclipse/JUnitTesting.html">own Junit tests here</a>.</p>
+</div>
+<div class="section" id="rest-of-class">
+<h2>Rest of Class<a class="headerlink" href="#rest-of-class" title="Permalink to this headline">¶</a></h2>
+<p>We went over the TVCode.zip examples found in the schedule section of the class website.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="Sep-9.html" class="btn btn-neutral float-left" title="9/2 Debugging" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
