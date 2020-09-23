@@ -153,7 +153,7 @@ Comparable vs Comparator
 ~~~~~~~~~~~~~~~~~~~~~~~~
 * **Comparable** is an interface that has **compareTo(T obj)** method
 
-* **Comparator** is an interface that has **compare(T obj)** method
+* **Comparator** is an interface that has **compare(T obj1, T obj2)** method
 
 * Both need to specify <T> the object type
 
