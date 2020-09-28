@@ -182,7 +182,7 @@ This is generally how implementation of this would look like:
                 public Student next() {
                     /* Code to return the next available student in the roster */
                 }
-            }
+            };
         }
     }
 

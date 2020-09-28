@@ -1,4 +1,4 @@
-9/21 Comparators 
+9/21 Comparators
 ================
 
 Reminders
