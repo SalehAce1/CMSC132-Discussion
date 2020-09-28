@@ -1,5 +1,5 @@
-Singletons and Decorators
-=========================
+9/28 Singletons and Decorators
+==============================
 
 Reminders
 ^^^^^^^^^
