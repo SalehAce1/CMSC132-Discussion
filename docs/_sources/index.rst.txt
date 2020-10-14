@@ -19,3 +19,4 @@ This site will contain notes for CMSC132 lab section of Fall 2020.
    Sep-28
    Sep-30
    Oct-12
+   Oct-14
