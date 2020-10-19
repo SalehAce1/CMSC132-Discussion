@@ -1,0 +1,361 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>10/19 Linked Lists &mdash; CMSC132 Fall 2020 Discussion Notes 1.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="10/14 UML Continued" href="Oct-14.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> CMSC132 Fall 2020 Discussion Notes
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Sep-2.html">9/2 Intro/Using Eclipse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sep-9.html">9/9 Debugging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sep-14.html">9/14 Inheritance and JUnit Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sep-21.html">9/21 Comparators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sep-23.html">9/23 Exam Review</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sep-28.html">9/28 Singletons and Decorators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sep-30.html">9/30 StringBuffer and Command Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Oct-12.html">10/12 UML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Oct-14.html">10/14 UML Continued</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">10/19 Linked Lists</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#reminders">Reminders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#material">Material</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#last-week-review">Last Week Review</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#recursion">Recursion</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">Linked Lists</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#dummy-nodes">Dummy Nodes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#java-s-linkedlist-class">Java’s LinkedList Class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#arraylist-vs-linkedlist">ArrayList vs LinkedList</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">CMSC132 Fall 2020 Discussion Notes</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>10/19 Linked Lists</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/Oct-19.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="linked-lists">
+<h1>10/19 Linked Lists<a class="headerlink" href="#linked-lists" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="reminders">
+<h2>Reminders<a class="headerlink" href="#reminders" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Project 4 is due next Tuesday.</p></li>
+<li><p>Exam 2 is on Friday.</p></li>
+</ul>
+</div>
+<div class="section" id="material">
+<h2>Material<a class="headerlink" href="#material" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Simplified linked list slides <a class="reference external" href="http://www.cs.umd.edu/class/fall2020/cmsc132/labs/Week8/SimplifiedListImplementation.pdf">from here.</a></p></li>
+<li><p>LinkedList <a class="reference external" href="https://docs.oracle.com/en/java/javase/13/docs/api/java.base/java/util/LinkedList.html">Java documentation.</a></p></li>
+<li><p>Special iterator <a class="reference external" href="https://docs.oracle.com/en/java/javase/13/docs/api/java.base/java/util/ListIterator.html">Java documentation.</a></p></li>
+</ul>
+</div>
+<div class="section" id="last-week-review">
+<h2>Last Week Review<a class="headerlink" href="#last-week-review" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="recursion">
+<h3>Recursion<a class="headerlink" href="#recursion" title="Permalink to this headline">¶</a></h3>
+<p>Algorithm that manages repetition by calling itself.
+Each recursion algorithm has a <strong>recursive case</strong> that repeats and a
+<strong>base case</strong> that occurs once we do not wish to repeat.
+While using iteration (loops) is typically more efficient, some problems
+are easier to understand/implement recursively.</p>
+<p><strong>Tail Recursion</strong> is a recursive algorithm that only recursively calls itself and no other function.
+These are automatically turned into regular loops by the compiler.</p>
+<div class="highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Non-tail Recursive</span>
+<span class="kt">int</span> <span class="nf">factorial</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">n</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">factorial</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// Tail Recursion</span>
+<span class="kt">int</span> <span class="nf">factorial</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="kt">int</span> <span class="n">ans</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="n">ans</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">factorial</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">*</span> <span class="n">ans</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>A <strong>stack overflow</strong> occurs when a recursive algorithm goes over the stack limit, typically due to an infinite recursion.</p>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>Linked Lists<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="dummy-nodes">
+<h3>Dummy Nodes<a class="headerlink" href="#dummy-nodes" title="Permalink to this headline">¶</a></h3>
+<p>First we went through the simplified linked list slides which demonstrated the
+use of a <strong>dummy node</strong>, a head node with no value that always exists at the start of
+our linked list and does not change. By having such a node, we no longer have to write out
+special cases that check or manipulate the head node.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>You cannot use dummy nodes in your project.</p>
+</div>
+</div>
+<div class="section" id="java-s-linkedlist-class">
+<h3>Java’s LinkedList Class<a class="headerlink" href="#java-s-linkedlist-class" title="Permalink to this headline">¶</a></h3>
+<p>Java has its own Linked List library as a part of its Collections framework.
+A LinkedList is-a:</p>
+<ul class="simple">
+<li><p>Iterable (interface): Can be iterated over.</p></li>
+<li><p>Collection (interface): Collection of values.</p></li>
+<li><p>List (interface): Collection of ordered values that allows for duplicates.</p></li>
+<li><p>Queue (interface): Collection that follows FIFO.</p></li>
+<li><p>Dequeue (interface): Collection that follows FIFO and LIFO.</p></li>
+</ul>
+<div class="figure align-default" id="id3">
+<a class="reference internal image-reference" href="_images/diag.png"><img alt="_images/diag.png" src="_images/diag.png" style="width: 600.0px; height: 562.0px;" /></a>
+<p class="caption"><span class="caption-text">Figure 1: Diagram that depicts the relationship between the LinkedList class and other Collection classes.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<p>We went over the different methods within the Java documentation for LinkedList and ListIterator.
+ListIterator allows for forward and backward traversal of a linked list.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Since LinkedList is a Dequeue and AbstractList, it implements methods from both Dequeue and ArrayList.</p>
+</div>
+<p>Here’s some example code:</p>
+<div class="highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">LinkedListDemo</span>
+<span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+        <span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;B&quot;</span><span class="p">);</span> <span class="c1">// Adds to the end of the list</span>
+        <span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;C&quot;</span><span class="p">);</span>
+        <span class="n">list</span><span class="p">.</span><span class="na">addFirst</span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="p">);</span> <span class="c1">// Adds to the front</span>
+        <span class="n">list</span><span class="p">.</span><span class="na">addLast</span><span class="p">(</span><span class="s">&quot;D&quot;</span><span class="p">);</span> <span class="c1">// Adds to the end</span>
+        <span class="n">list</span><span class="p">.</span><span class="na">addFirst</span><span class="p">(</span><span class="s">&quot;Z&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">list</span><span class="p">);</span> <span class="c1">// [Z, A, B, C, D]</span>
+        <span class="n">list</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="s">&quot;D&quot;</span><span class="p">);</span> <span class="c1">// Removes first instance of D</span>
+        <span class="n">list</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span> <span class="c1">// Removes element at index 0</span>
+
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Regular for each loop&quot;</span><span class="p">);</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">String</span> <span class="n">i</span> <span class="p">:</span> <span class="n">list</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Backwards with descendingIterator method&quot;</span><span class="p">);</span>
+        <span class="n">Iterator</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">iter</span> <span class="o">=</span> <span class="n">list</span><span class="p">.</span><span class="na">descendingIterator</span><span class="p">();</span>
+        <span class="k">while</span> <span class="p">(</span><span class="n">iter</span><span class="p">.</span><span class="na">hasNext</span><span class="p">())</span>
+        <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">iter</span><span class="p">.</span><span class="na">next</span><span class="p">());</span>
+        <span class="p">}</span>
+
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Backwards with ListIterator&quot;</span><span class="p">);</span>
+        <span class="n">ListIterator</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">lstIter</span> <span class="o">=</span> <span class="n">list</span><span class="p">.</span><span class="na">listIterator</span><span class="p">(</span><span class="n">list</span><span class="p">.</span><span class="na">size</span><span class="p">());</span>
+        <span class="k">while</span> <span class="p">(</span><span class="n">lstIter</span><span class="p">.</span><span class="na">hasPrevious</span><span class="p">())</span>
+        <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">lstIter</span><span class="p">.</span><span class="na">previous</span><span class="p">());</span>
+            <span class="c1">// lstIter.next(); -&gt; Creates infinite loop</span>
+        <span class="p">}</span>
+
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="arraylist-vs-linkedlist">
+<h3>ArrayList vs LinkedList<a class="headerlink" href="#arraylist-vs-linkedlist" title="Permalink to this headline">¶</a></h3>
+<p>LinkedLists have more functionality than ArrayLists but
+this comes at the cost of them being slower. This is mainly due to
+how LinkedLists are linear data structures (elements are seperate objects
+that must be traversed towards) where as Arrays are stored in a single chunk of
+memory and can be accessed with O(1) operations.
+LinkedLists also consume more memory than ArrayLists.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="Oct-14.html" class="btn btn-neutral float-left" title="10/14 UML Continued" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
