@@ -1,0 +1,355 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>11/2 Maps &mdash; CMSC132 Fall 2020 Discussion Notes 1.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="10/28 Hashing Exercise" href="Oct-28.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> CMSC132 Fall 2020 Discussion Notes
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Sep-2.html">9/2 Intro/Using Eclipse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sep-9.html">9/9 Debugging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sep-14.html">9/14 Inheritance and JUnit Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sep-21.html">9/21 Comparators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sep-23.html">9/23 Exam Review</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sep-28.html">9/28 Singletons and Decorators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sep-30.html">9/30 StringBuffer and Command Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Oct-12.html">10/12 UML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Oct-14.html">10/14 UML Continued</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Oct-19.html">10/19 Linked Lists</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Oct-21.html">10/21 Exam Review</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Oct-26.html">10/26 Networking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Oct-28.html">10/28 Hashing Exercise</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">11/2 Maps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#reminders">Reminders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#material">Material</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#last-week-review">Last Week Review</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Maps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#algorithm-complexity">Algorithm Complexity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#trees">Trees</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#the-rest-of-class">The Rest of Class</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">CMSC132 Fall 2020 Discussion Notes</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>11/2 Maps</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/Nov-2.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="maps">
+<h1>11/2 Maps<a class="headerlink" href="#maps" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="reminders">
+<h2>Reminders<a class="headerlink" href="#reminders" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Quiz 3 will occur on Wednesday and will be available from 9:00 am to 5:00 pm. A worksheet with more information can be found on the class webpage.</p></li>
+</ul>
+</div>
+<div class="section" id="material">
+<h2>Material<a class="headerlink" href="#material" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.cs.umd.edu/class/fall2020/cmsc132/labs/Week10/MapsWorksheet.pdf">Today’s Worksheet</a></p></li>
+</ul>
+</div>
+<div class="section" id="last-week-review">
+<h2>Last Week Review<a class="headerlink" href="#last-week-review" title="Permalink to this headline">¶</a></h2>
+<p>We learned about maps, trees, and more algorithm complexity last week.</p>
+<div class="section" id="id1">
+<h3>Maps<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p><strong>Maps</strong> are a data structure that links a unique list of keys to different values,
+allowing for O(1) access to these values. Think of a regular array and how it maps unique keys
+(natural numbers) to values of our choice. Maps work the same way accept we choose the type of our keys.
+Since keys must be unique and can be unordered, we use the <strong>Set</strong> data structure to store them.</p>
+<p>Like Sets, Maps come in three major types in Java as well. The <strong>TreeMap</strong> class holds a map
+with sorted keys, <strong>LinkedHashMap</strong> has its keys in insertion order, and <strong>HashMap</strong> has no order.</p>
+<p>Methods you should know:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="code docutils literal notranslate"><span class="pre">void</span> <span class="pre">put(K</span> <span class="pre">key,</span> <span class="pre">V</span> <span class="pre">val)</span></code></p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">V</span> <span class="pre">get(Object</span> <span class="pre">key)</span></code></p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">int</span> <span class="pre">size()</span></code></p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">boolean</span> <span class="pre">containsKey(Object</span> <span class="pre">key)</span></code></p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">boolean</span> <span class="pre">containsValue(Object</span> <span class="pre">val)</span></code></p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">Set&lt;K&gt;</span> <span class="pre">keySet()</span></code></p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">Collection&lt;V&gt;</span> <span class="pre">values()</span></code></p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="algorithm-complexity">
+<h3>Algorithm Complexity<a class="headerlink" href="#algorithm-complexity" title="Permalink to this headline">¶</a></h3>
+<p>Given the following program, you should be able to state the time complexity and Big-O of the code.</p>
+<div class="highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">someComputation</span><span class="p">();</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">i</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>T(n) = 1 + log(n) + log(n) =&gt; O(log(n))</p>
+<p>Remember that <strong>Big-O</strong> is used to represent an upperbound of the time complexity,
+<strong>Big-Omega</strong> is used to represent the lowerbound, and finally, <strong>Big-Theta</strong> tells us that
+our upperbound and lowerbound are equal asymtotically.</p>
+</div>
+<div class="section" id="trees">
+<h3>Trees<a class="headerlink" href="#trees" title="Permalink to this headline">¶</a></h3>
+<p><strong>Trees</strong> are a data structure made up of parents and children where every
+(parent) node can have several other (children) nodes coming out of it.</p>
+<p>Here’s some terminology:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Root: The node that starts the tree (has no parent).</p></li>
+<li><p>Leaf or external: Nodes with no children.</p></li>
+<li><p>Interior: Nodes with children.</p></li>
+<li><p>Depth or level: Length of path from a node to the root.</p></li>
+<li><p>Height: Longest number of nodes to a leaf where the root is at height 0.</p></li>
+</ul>
+</div></blockquote>
+<p><strong>Binary Trees</strong> are a special tree where every node can only have 2 or less node children.
+There are a few types of them:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Degenerate: A tree where each interior node usually has only 1 child, turning the tree into a regular linked list.</p></li>
+<li><p>Balanced: A tree where each interior node usually has 2 children.</p></li>
+<li><p>Full: A perfectly balanced tree where every interior node has 2 children.</p></li>
+</ul>
+</div></blockquote>
+<p>There are 4 major ways to go through a binary tree:</p>
+<div class="highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Gives nodes in order that lets us recreate exact tree</span>
+<span class="kt">void</span> <span class="nf">preorder</span><span class="p">(</span><span class="n">root</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// access root.data</span>
+    <span class="n">preorder</span><span class="p">(</span><span class="n">root</span><span class="p">.</span><span class="na">left</span><span class="p">)</span>
+    <span class="n">preorder</span><span class="p">(</span><span class="n">root</span><span class="p">.</span><span class="na">right</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1">// Gives nodes in order of values in a binary search tree</span>
+<span class="kt">void</span> <span class="nf">inorder</span><span class="p">(</span><span class="n">root</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">inorder</span><span class="p">(</span><span class="n">root</span><span class="p">.</span><span class="na">left</span><span class="p">)</span>
+    <span class="c1">// access root.data</span>
+    <span class="n">inorder</span><span class="p">(</span><span class="n">root</span><span class="p">.</span><span class="na">right</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1">// Good for deleting tree in language with no automatic garbage collection</span>
+<span class="kt">void</span> <span class="nf">postorder</span><span class="p">(</span><span class="n">root</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">postorder</span><span class="p">(</span><span class="n">root</span><span class="p">.</span><span class="na">left</span><span class="p">)</span>
+    <span class="n">postorder</span><span class="p">(</span><span class="n">root</span><span class="p">.</span><span class="na">right</span><span class="p">)</span>
+    <span class="c1">// access root.data</span>
+<span class="p">}</span>
+
+<span class="c1">// Gives nodes in order of depth</span>
+<span class="kt">void</span> <span class="nf">depthorder</span><span class="p">(</span><span class="n">root</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">q</span><span class="p">.</span><span class="na">push</span><span class="p">(</span><span class="n">root</span><span class="p">)</span>
+    <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">q</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">())</span>
+    <span class="p">{</span>
+        <span class="n">Node</span> <span class="n">n</span> <span class="o">=</span> <span class="n">q</span><span class="p">.</span><span class="na">pop</span><span class="p">()</span>
+        <span class="n">q</span><span class="p">.</span><span class="na">push</span><span class="p">(</span><span class="n">n</span><span class="p">.</span><span class="na">left</span><span class="p">)</span>
+        <span class="n">q</span><span class="p">.</span><span class="na">push</span><span class="p">(</span><span class="n">n</span><span class="p">.</span><span class="na">right</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Binary Search Trees</strong> are trees where at each node, the left child is
+smaller than the parent and the right child is larger than the parent.
+This allows us to search for values in O(log(n)) time so long as the tree is balanced.</p>
+</div>
+</div>
+<div class="section" id="the-rest-of-class">
+<h2>The Rest of Class<a class="headerlink" href="#the-rest-of-class" title="Permalink to this headline">¶</a></h2>
+<p>We spent the rest of class working on the worksheet from the materials section.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="Oct-28.html" class="btn btn-neutral float-left" title="10/28 Hashing Exercise" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
