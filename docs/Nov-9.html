@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Index &mdash; CMSC132 Fall 2020 Discussion Notes 1.0.0 documentation</title>
+  <title>11/2 BST Worksheet &mdash; CMSC132 Fall 2020 Discussion Notes 1.0.0 documentation</title>
   
 
   
@@ -34,8 +34,9 @@
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
     
-    <link rel="index" title="Index" href="#" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="11/2 Maps" href="Nov-2.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -80,7 +81,7 @@
               
             
             
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Sep-2.html">9/2 Intro/Using Eclipse</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Sep-9.html">9/9 Debugging</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Sep-14.html">9/14 Inheritance and JUnit Testing</a></li>
@@ -95,7 +96,16 @@
 <li class="toctree-l1"><a class="reference internal" href="Oct-26.html">10/26 Networking</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Oct-28.html">10/28 Hashing Exercise</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Nov-2.html">11/2 Maps</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Nov-9.html">11/2 BST Worksheet</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">11/2 BST Worksheet</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#reminders">Reminders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#materials">Materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#review">Review</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#polymorphic-bst">Polymorphic BST</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#class-worksheet">Class Worksheet</a></li>
+</ul>
+</li>
 </ul>
 
             
@@ -142,12 +152,14 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Index</li>
+      <li>11/2 BST Worksheet</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
+            <a href="_sources/Nov-9.rst.txt" rel="nofollow"> View page source</a>
+          
         
       </li>
     
@@ -159,11 +171,48 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-
-<h1 id="index">Index</h1>
-
-<div class="genindex-jumpbox">
- 
+  <div class="section" id="bst-worksheet">
+<h1>11/2 BST Worksheet<a class="headerlink" href="#bst-worksheet" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="reminders">
+<h2>Reminders<a class="headerlink" href="#reminders" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Project 5 is due today.</p></li>
+<li><p>Project 6 will release today and is due next Wednesday.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="materials">
+<h2>Materials<a class="headerlink" href="#materials" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="http://www.cs.umd.edu/class/fall2020/cmsc132/labs/Week11/BSTWorksheet.pdf">Today’s Worksheet</a></p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="review">
+<h2>Review<a class="headerlink" href="#review" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="polymorphic-bst">
+<h3>Polymorphic BST<a class="headerlink" href="#polymorphic-bst" title="Permalink to this headline">¶</a></h3>
+<p>A binary search tree where instead of indicating the ends of the tree using null,
+we use a class. This allows us to not have to check for null. While this isn’t
+the most efficient way of implementing a BST, it is a good way to learn about
+polymorphism.</p>
+<p>We start out with a <strong>Tree</strong> interface that requires the implementation of typical tree methods
+such as <strong>insert()</strong>. We will have an <strong>EmptyTree</strong> and a <strong>NonEmptyTree</strong> class that implement the
+<strong>Tree</strong> interface. The implementation of the two classes will be different. For example, the <strong>EmptyTree</strong>
+won’t have a left and right node as instance variables since it is empty but the <strong>NonEmptyTree</strong> will.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Since our <strong>EmptyTree</strong> only ever needs a single instance, we can define and use single final instance
+of it as a <strong>Singleton</strong>.</p>
+</div>
+</div>
+</div>
+<div class="section" id="class-worksheet">
+<h2>Class Worksheet<a class="headerlink" href="#class-worksheet" title="Permalink to this headline">¶</a></h2>
+<p>We split into groups and did the worksheet from the materials section.</p>
+</div>
 </div>
 
 
@@ -171,6 +220,13 @@
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="Nov-2.html" class="btn btn-neutral float-left" title="11/2 Maps" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
