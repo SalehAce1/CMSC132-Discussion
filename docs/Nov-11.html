@@ -1,6 +1,5 @@
 
 
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
@@ -8,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Index &mdash; CMSC132 Fall 2020 Discussion Notes 1.0.0 documentation</title>
+  <title>11/11 Advanced Trees &mdash; CMSC132 Fall 2020 Discussion Notes 1.0.0 documentation</title>
   
 
   
@@ -35,8 +34,9 @@
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
     
-    <link rel="index" title="Index" href="#" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="11/9 BST Worksheet" href="Nov-9.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -81,7 +81,7 @@
               
             
             
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Sep-2.html">9/2 Intro/Using Eclipse</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Sep-9.html">9/9 Debugging</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Sep-14.html">9/14 Inheritance and JUnit Testing</a></li>
@@ -97,7 +97,16 @@
 <li class="toctree-l1"><a class="reference internal" href="Oct-28.html">10/28 Hashing Exercise</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Nov-2.html">11/2 Maps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Nov-9.html">11/9 BST Worksheet</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Nov-11.html">11/11 Advanced Trees</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">11/11 Advanced Trees</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#reminders">Reminders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#review">Review</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#complete-binary-trees">Complete Binary Trees</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heaps">Heaps</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">Advanced Trees</a></li>
+</ul>
+</li>
 </ul>
 
             
@@ -144,12 +153,14 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Index</li>
+      <li>11/11 Advanced Trees</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
+            <a href="_sources/Nov-11.rst.txt" rel="nofollow"> View page source</a>
+          
         
       </li>
     
@@ -161,11 +172,37 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-
-<h1 id="index">Index</h1>
-
-<div class="genindex-jumpbox">
- 
+  <div class="section" id="advanced-trees">
+<h1>11/11 Advanced Trees<a class="headerlink" href="#advanced-trees" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="reminders">
+<h2>Reminders<a class="headerlink" href="#reminders" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Project 6 was released on Monday 11/9 and is due next Wednesday.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="review">
+<h2>Review<a class="headerlink" href="#review" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="complete-binary-trees">
+<h3>Complete Binary Trees<a class="headerlink" href="#complete-binary-trees" title="Permalink to this headline">¶</a></h3>
+<p>Complete Binary Trees are binary trees that have fullness in the internal nodes, and the leaves are as far left as possible.</p>
+</div>
+<div class="section" id="heaps">
+<h3>Heaps<a class="headerlink" href="#heaps" title="Permalink to this headline">¶</a></h3>
+<p>Heaps are Complete Binary Trees that can either be a <strong>Minheap</strong> or a <strong>Maxheap</strong>.</p>
+<ul class="simple">
+<li><p><strong>Minheap</strong> is a heap where the value at the current node is less than or equal to the values in both subtrees.</p></li>
+<li><p><strong>Maxheap</strong> is a heap where the value at the current node is greater than or equal to the values in both subtrees.</p></li>
+</ul>
+<p>Heaps are <strong>balanced trees</strong>. This means that they minimize the height of the tree, where the height of the tree is <strong>O (log n)</strong>.</p>
+<p>For Heap operations, reference <a class="reference external" href="https://www.cs.umd.edu/class/fall2020/cmsc132/lectures/Week11/HeapsPriorityQueues.pdf">these slides.</a></p>
+</div>
+</div>
+<div class="section" id="id1">
+<h2>Advanced Trees<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>We will now look at today’s slideset, found <a class="reference external" href="http://www.cs.umd.edu/class/fall2020/cmsc132/labs/Week11/AdvancedTrees.pdf">here.</a></p>
+</div>
 </div>
 
 
@@ -173,6 +210,13 @@
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="Nov-9.html" class="btn btn-neutral float-left" title="11/9 BST Worksheet" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
