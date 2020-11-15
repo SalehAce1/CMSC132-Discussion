@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>11/11 Advanced Trees &mdash; CMSC132 Fall 2020 Discussion Notes 1.0.0 documentation</title>
+  <title>11/16 RegEx &mdash; CMSC132 Fall 2020 Discussion Notes 1.0.0 documentation</title>
   
 
   
@@ -36,8 +36,7 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="11/16 RegEx" href="Nov-16.html" />
-    <link rel="prev" title="11/9 BST Worksheet" href="Nov-9.html" /> 
+    <link rel="prev" title="11/11 Advanced Trees" href="Nov-11.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -98,17 +97,21 @@
 <li class="toctree-l1"><a class="reference internal" href="Oct-28.html">10/28 Hashing Exercise</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Nov-2.html">11/2 Maps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Nov-9.html">11/9 BST Worksheet</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">11/11 Advanced Trees</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="Nov-11.html">11/11 Advanced Trees</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">11/16 RegEx</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#reminders">Reminders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#materials">Materials</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#review">Review</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#complete-binary-trees">Complete Binary Trees</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#heaps">Heaps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#threads">Threads</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#approach-1-to-threading">Approach 1 to threading</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#approach-2-to-thread-preferred">Approach 2 to thread (preferred)</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id1">Advanced Trees</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Nov-16.html">11/16 RegEx</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#regular-expressions">Regular Expressions</a></li>
+</ul>
+</li>
 </ul>
 
             
@@ -155,13 +158,13 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>11/11 Advanced Trees</li>
+      <li>11/16 RegEx</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/Nov-11.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/Nov-16.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -174,36 +177,66 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="advanced-trees">
-<h1>11/11 Advanced Trees<a class="headerlink" href="#advanced-trees" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="regex">
+<h1>11/16 RegEx<a class="headerlink" href="#regex" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="reminders">
 <h2>Reminders<a class="headerlink" href="#reminders" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><ul class="simple">
-<li><p>Project 6 was released on Monday 11/9 and is due next Wednesday.</p></li>
+<li><p>Your third exam is this Friday.</p></li>
+<li><p>Project 6 is due this Wednesday.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="materials">
+<h2>Materials<a class="headerlink" href="#materials" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="http://www.cs.umd.edu/class/fall2020/cmsc132/labs/Week12/RegularExpressions.pdf">Notes on RegEx</a></p></li>
+<li><p><a class="reference external" href="http://www.cs.umd.edu/class/fall2020/cmsc132/labs/Week12/RegularExpressionsExample.zip">RegEx example files</a></p></li>
 </ul>
 </div></blockquote>
 </div>
 <div class="section" id="review">
 <h2>Review<a class="headerlink" href="#review" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="complete-binary-trees">
-<h3>Complete Binary Trees<a class="headerlink" href="#complete-binary-trees" title="Permalink to this headline">¶</a></h3>
-<p>Complete Binary Trees are binary trees that have fullness in the internal nodes, and the leaves are as far left as possible.</p>
+<div class="section" id="threads">
+<h3>Threads<a class="headerlink" href="#threads" title="Permalink to this headline">¶</a></h3>
+<p><strong>Threading</strong> is a technique used to give the illusion of parallelism such that it appears multiple processes are
+being done at the same time. In reality there is a proccess called the <strong>scheduler</strong> that
+keeps track of the context of the task being processed and switches between different tasks to create multitasking.</p>
+<div class="section" id="approach-1-to-threading">
+<h4>Approach 1 to threading<a class="headerlink" href="#approach-1-to-threading" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyThread</span> <span class="kd">extends</span> <span class="n">Thread</span>
+<span class="p">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="c1">// Thread task</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="c1">// ...</span>
+<span class="n">MyThread</span> <span class="n">t</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MyThread</span><span class="p">();</span>
+<span class="n">t</span><span class="p">.</span><span class="na">start</span><span class="p">();</span> <span class="c1">// Begin thread</span>
+<span class="n">t</span><span class="p">.</span><span class="na">wait</span><span class="p">()</span> <span class="c1">// Stop current thread until thread t terminates</span>
+</pre></div>
 </div>
-<div class="section" id="heaps">
-<h3>Heaps<a class="headerlink" href="#heaps" title="Permalink to this headline">¶</a></h3>
-<p>Heaps are Complete Binary Trees that can either be a <strong>Minheap</strong> or a <strong>Maxheap</strong>.</p>
-<ul class="simple">
-<li><p><strong>Minheap</strong> is a heap where the value at the current node is less than or equal to the values in both subtrees.</p></li>
-<li><p><strong>Maxheap</strong> is a heap where the value at the current node is greater than or equal to the values in both subtrees.</p></li>
-</ul>
-<p>Heaps are <strong>balanced trees</strong>. This means that they minimize the height of the tree, where the height of the tree is <strong>O (log n)</strong>.</p>
-<p>For Heap operations, reference <a class="reference external" href="https://www.cs.umd.edu/class/fall2020/cmsc132/lectures/Week11/HeapsPriorityQueues.pdf">these slides.</a></p>
+</div>
+<div class="section" id="approach-2-to-thread-preferred">
+<h4>Approach 2 to thread (preferred)<a class="headerlink" href="#approach-2-to-thread-preferred" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Implement the Runnable interface and give it to the thread</span>
+<span class="n">Thread</span> <span class="n">t</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Thread</span><span class="p">(()</span> <span class="o">-&gt;</span>
+<span class="p">{</span>
+    <span class="c1">// Thread code</span>
+<span class="p">});</span>
+<span class="n">t</span><span class="p">.</span><span class="na">start</span><span class="p">();</span> <span class="c1">// Begin thread</span>
+<span class="n">t</span><span class="p">.</span><span class="na">wait</span><span class="p">()</span> <span class="c1">// Stop current thread until thread t terminates</span>
+</pre></div>
 </div>
 </div>
-<div class="section" id="id1">
-<h2>Advanced Trees<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p>We will now look at today’s slideset, found <a class="reference external" href="http://www.cs.umd.edu/class/fall2020/cmsc132/labs/Week11/AdvancedTrees.pdf">here.</a></p>
+</div>
+</div>
+<div class="section" id="regular-expressions">
+<h2>Regular Expressions<a class="headerlink" href="#regular-expressions" title="Permalink to this headline">¶</a></h2>
+<p>We wents through the powerpoint and example linked at the start of this page.</p>
 </div>
 </div>
 
@@ -215,10 +248,8 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="Nov-16.html" class="btn btn-neutral float-right" title="11/16 RegEx" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-      
-        <a href="Nov-9.html" class="btn btn-neutral float-left" title="11/9 BST Worksheet" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="Nov-11.html" class="btn btn-neutral float-left" title="11/11 Advanced Trees" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
