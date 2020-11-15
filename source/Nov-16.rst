@@ -55,4 +55,4 @@ Approach 2 to thread (preferred)
 
 Regular Expressions
 ^^^^^^^^^^^^^^^^^^^
-We wents through the powerpoint and example linked at the start of this page. 
+We went through the powerpoint and example linked at the start of this page. 
