@@ -39,7 +39,7 @@ Approach 1 to threading
     // ...
     MyThread t = new MyThread();
     t.start(); // Begin thread
-    t.wait() // Stop current thread until thread t terminates 
+    t.join() // Stop current thread until thread t terminates 
 
 Approach 2 to thread (preferred)
 ********************************
@@ -51,7 +51,7 @@ Approach 2 to thread (preferred)
         // Thread code
     });
     t.start(); // Begin thread
-    t.wait() // Stop current thread until thread t terminates 
+    t.join() // Stop current thread until thread t terminates 
 
 Regular Expressions
 ^^^^^^^^^^^^^^^^^^^
