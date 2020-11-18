@@ -1,0 +1,444 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>11/18 Exam Review &mdash; CMSC132 Fall 2020 Discussion Notes 1.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="11/16 RegEx" href="Nov-16.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> CMSC132 Fall 2020 Discussion Notes
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Sep-2.html">9/2 Intro/Using Eclipse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sep-9.html">9/9 Debugging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sep-14.html">9/14 Inheritance and JUnit Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sep-21.html">9/21 Comparators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sep-23.html">9/23 Exam Review</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sep-28.html">9/28 Singletons and Decorators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sep-30.html">9/30 StringBuffer and Command Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Oct-12.html">10/12 UML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Oct-14.html">10/14 UML Continued</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Oct-19.html">10/19 Linked Lists</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Oct-21.html">10/21 Exam Review</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Oct-26.html">10/26 Networking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Oct-28.html">10/28 Hashing Exercise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Nov-2.html">11/2 Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Nov-9.html">11/9 BST Worksheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Nov-11.html">11/11 Advanced Trees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Nov-16.html">11/16 RegEx</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">11/18 Exam Review</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#reminders">Reminders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#exam-logistics">Exam Logistics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">Exam Review</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#recursion">Recursion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#memory-maps">Memory Maps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#linear-data-structures">Linear Data Structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hashing">Hashing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sets-maps">Sets/Maps</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">CMSC132 Fall 2020 Discussion Notes</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>11/18 Exam Review</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/Nov-18.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="exam-review">
+<h1>11/18 Exam Review<a class="headerlink" href="#exam-review" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="reminders">
+<h2>Reminders<a class="headerlink" href="#reminders" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Project 6 is due <strong>TONIGHT</strong>.</p></li>
+<li><p>Third Exam is on Friday 11/20.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="exam-logistics">
+<h2>Exam Logistics<a class="headerlink" href="#exam-logistics" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Find Exam info page <a class="reference external" href="http://www.cs.umd.edu/class/fall2020/cmsc132/exams/exam3/">here.</a></p></li>
+<li><p>Exam will be posted on Friday at 9 AM and will be due 5 PM.</p></li>
+<li><p>No lecture video will be posted for Friday.</p></li>
+<li><p>TAs will hold normal OH on Friday, but questions about the exam <strong>WILL NOT</strong> be accepted.</p></li>
+<li><p>The exam is open note.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id1">
+<h2>Exam Review<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Revisit 10/21 and 9/23 discussion notes to look over concepts from prior exams</p></li>
+</ul>
+<div class="section" id="recursion">
+<h3>Recursion<a class="headerlink" href="#recursion" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p>Recursion is an approach to solve a problem by creating a method that has a call to itself within the body of the method.</p></li>
+<li><p><strong>All</strong> iterative solutions can be rewritten as recursive solutions because iteration is simply a special case of recursion: <strong>tail recursion</strong>.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Tail recursion</strong> occurs when the method has a recursive call as its final action and no additional processing.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<div class="highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Example of a tail recursive method</span>
+<span class="kt">int</span> <span class="nf">factorial</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="kt">int</span> <span class="n">partialResult</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">partialResult</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">factorial</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">*</span> <span class="n">partialResult</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// Written iteratively</span>
+<span class="kt">int</span> <span class="nf">factorial</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="kt">int</span> <span class="n">partialResult</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">n</span><span class="o">!=</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">partialResult</span> <span class="o">=</span> <span class="n">n</span> <span class="o">*</span> <span class="n">partialResult</span><span class="p">;</span> <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">partialResult</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="memory-maps">
+<h3>Memory Maps<a class="headerlink" href="#memory-maps" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>These maps have a space for the stack and a space for the heap.</p></li>
+<li><p>We can look at some examples.</p></li>
+</ul>
+</div>
+<div class="section" id="linear-data-structures">
+<h3>Linear Data Structures<a class="headerlink" href="#linear-data-structures" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>These data structures include Linked Lists, Stacks, Queues, etc.</p></li>
+<li><p>Let’s look at the slideset to review <a class="reference external" href="https://www.cs.umd.edu/class/fall2020/cmsc132/lectures/Week6/LinearDataStructures.pdf">Linked Lists</a></p></li>
+<li><p>You want to know how to make iterative and recursive methods for Linked Lists.</p></li>
+<li><p>Iterative solutions will use references to previous/current Node(s) to move through the Linked List.</p></li>
+</ul>
+<div class="highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Suppose you only need to modify one element</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">methodX</span><span class="p">(</span><span class="n">T</span> <span class="n">targetData</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">Node</span> <span class="n">curr</span> <span class="o">=</span> <span class="n">head</span><span class="p">;</span>
+
+    <span class="k">while</span> <span class="p">(</span><span class="n">curr</span><span class="p">.</span><span class="na">data</span> <span class="o">!=</span> <span class="n">targetData</span> <span class="o">&amp;&amp;</span> <span class="n">curr</span><span class="p">.</span><span class="na">next</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">curr</span> <span class="o">=</span> <span class="n">curr</span><span class="p">.</span><span class="na">next</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Process node here</span>
+<span class="p">}</span>
+
+<span class="c1">// Suppose you want to delete an element. In that case, you need to also keep track of the previous Node.</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">methodY</span><span class="p">(</span><span class="n">T</span> <span class="n">targetData</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">Node</span> <span class="n">curr</span> <span class="o">=</span> <span class="n">head</span><span class="p">;</span>
+    <span class="n">Node</span> <span class="n">prev</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+
+    <span class="k">while</span> <span class="p">(</span><span class="n">curr</span><span class="p">.</span><span class="na">data</span> <span class="o">!=</span> <span class="n">targetData</span> <span class="o">&amp;&amp;</span> <span class="n">curr</span><span class="p">.</span><span class="na">next</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">prev</span> <span class="o">=</span> <span class="n">curr</span><span class="p">;</span>
+        <span class="n">curr</span> <span class="o">=</span> <span class="n">curr</span><span class="p">.</span><span class="na">next</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Process node here</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Recursive solutions will often times utilize auxiliary methods that take in an additional parameter representing the head of the current section of the Linked List.</p></li>
+</ul>
+<div class="highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">methodZ</span><span class="p">(</span><span class="n">T</span> <span class="n">targetData</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">methodZAux</span><span class="p">(</span><span class="n">head</span><span class="p">,</span> <span class="n">targetData</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">private</span> <span class="kt">void</span> <span class="nf">methodZAux</span><span class="p">(</span><span class="n">Node</span> <span class="n">headAux</span><span class="p">,</span> <span class="n">T</span> <span class="n">targetData</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">headAux</span><span class="p">.</span><span class="na">data</span> <span class="o">=</span> <span class="n">targetData</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">// Process node here</span>
+    <span class="p">}</span>
+    <span class="k">else</span>
+    <span class="p">{</span>
+        <span class="n">methodZAux</span><span class="p">(</span><span class="n">headAux</span><span class="p">.</span><span class="na">next</span><span class="p">,</span> <span class="n">targetData</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ul>
+<li><p>Some tips for writing recursive solutions for Linked Lists:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Be deliberate about what your return types are, these can make the solution easier.</p></li>
+<li><p>Keep track of what the possible base cases are. <strong>MAKE SURE THERE IS NO INFINITE RECURSION</strong>.</p></li>
+<li><p>Begin writing your solution as if the recursive method already performs the correct work. This can simplify the thought process and make it clear what code needs to be written.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="hashing">
+<h3>Hashing<a class="headerlink" href="#hashing" title="Permalink to this headline">¶</a></h3>
+<p>Collision Handling:</p>
+<ul>
+<li><p><strong>Open Addressing</strong>: Look for another open spot on the table.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Linear probing: Place the value into the next open spot.</p></li>
+<li><p>Quadratic probing: If at index k = j, go to index k + j^2, this prevents clustering.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>Separate Chaining</strong>: Each element can store multiple values.</p></li>
+</ul>
+<p><strong>Java’s Hash Code Contract</strong>: <code class="code docutils literal notranslate"><span class="pre">a.equals(b)</span> <span class="pre">=&gt;</span> <span class="pre">a.hashCode()</span> <span class="pre">==</span> <span class="pre">b.hashCode()</span></code> but the inverse and converse are not true.</p>
+</div>
+<div class="section" id="sets-maps">
+<h3>Sets/Maps<a class="headerlink" href="#sets-maps" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p><strong>Sets</strong>:</p>
+<blockquote>
+<div><ul>
+<li><p>Sets are collections of elements without duplicates.</p></li>
+<li><p>They do not have ordering. The order in which elements are added does not matter either.</p></li>
+<li><p>Sets offer the ability to quickly find and remove elements quickly. (Ideally does not require searching through all the elements)</p></li>
+<li><p>Concrete Sets Classes:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="code docutils literal notranslate"><span class="pre">HashSet</span></code>, where elements must implement the <code class="code docutils literal notranslate"><span class="pre">hashCode()</span></code> method.</p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">LinkedHashSet</span></code>, which is a <code class="code docutils literal notranslate"><span class="pre">HashSet</span></code> supporting the insertion order of elements.</p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">TreeSet</span></code>, which requires elements to be <code class="code docutils literal notranslate"><span class="pre">Comparable</span></code> or provide a <code class="code docutils literal notranslate"><span class="pre">Comparator</span></code>. This data structure ensures the elements are in sorted order.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>Maps</strong>:</p>
+<blockquote>
+<div><ul>
+<li><p>Maps are an unordered collection of keys, and each key has an associated value.</p></li>
+<li><p>The keys are used to retrieve the associated values.</p></li>
+<li><p>You can think of Maps as arrays that are indexed by any key instead of incrementing integers.</p></li>
+<li><p>Concrete Maps Classes:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="code docutils literal notranslate"><span class="pre">HashMap</span></code>, where elements must implement the <code class="code docutils literal notranslate"><span class="pre">hashCode()</span></code> method.</p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">LinkedHashMap</span></code>, which is a <code class="code docutils literal notranslate"><span class="pre">HashSet</span></code> supporting the insertion order of elements.</p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">TreeMap</span></code>, which requires elements to be <code class="code docutils literal notranslate"><span class="pre">Comparable</span></code> or provide a <code class="code docutils literal notranslate"><span class="pre">Comparator</span></code>. This data structure ensures the elements are in sorted order.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Methods you should know:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="code docutils literal notranslate"><span class="pre">void</span> <span class="pre">put(K</span> <span class="pre">key,</span> <span class="pre">V</span> <span class="pre">val)</span></code></p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">V</span> <span class="pre">get(Object</span> <span class="pre">key)</span></code></p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">int</span> <span class="pre">size()</span></code></p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">boolean</span> <span class="pre">containsKey(Object</span> <span class="pre">key)</span></code></p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">boolean</span> <span class="pre">containsValue(Object</span> <span class="pre">val)</span></code></p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">Set&lt;K&gt;</span> <span class="pre">keySet()</span></code></p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">Collection&lt;V&gt;</span> <span class="pre">values()</span></code></p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="Nov-16.html" class="btn btn-neutral float-left" title="11/16 RegEx" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

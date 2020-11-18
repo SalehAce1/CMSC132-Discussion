@@ -36,6 +36,7 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="11/18 Exam Review" href="Nov-18.html" />
     <link rel="prev" title="11/11 Advanced Trees" href="Nov-11.html" /> 
 </head>
 
@@ -112,6 +113,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#regular-expressions">Regular Expressions</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="Nov-18.html">11/18 Exam Review</a></li>
 </ul>
 
             
@@ -216,7 +218,7 @@ keeps track of the context of the task being processed and switches between diff
 <span class="c1">// ...</span>
 <span class="n">MyThread</span> <span class="n">t</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MyThread</span><span class="p">();</span>
 <span class="n">t</span><span class="p">.</span><span class="na">start</span><span class="p">();</span> <span class="c1">// Begin thread</span>
-<span class="n">t</span><span class="p">.</span><span class="na">wait</span><span class="p">()</span> <span class="c1">// Stop current thread until thread t terminates</span>
+<span class="n">t</span><span class="p">.</span><span class="na">join</span><span class="p">()</span> <span class="c1">// Stop current thread until thread t terminates</span>
 </pre></div>
 </div>
 </div>
@@ -228,7 +230,7 @@ keeps track of the context of the task being processed and switches between diff
     <span class="c1">// Thread code</span>
 <span class="p">});</span>
 <span class="n">t</span><span class="p">.</span><span class="na">start</span><span class="p">();</span> <span class="c1">// Begin thread</span>
-<span class="n">t</span><span class="p">.</span><span class="na">wait</span><span class="p">()</span> <span class="c1">// Stop current thread until thread t terminates</span>
+<span class="n">t</span><span class="p">.</span><span class="na">join</span><span class="p">()</span> <span class="c1">// Stop current thread until thread t terminates</span>
 </pre></div>
 </div>
 </div>
@@ -247,6 +249,8 @@ keeps track of the context of the task being processed and switches between diff
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Nov-18.html" class="btn btn-neutral float-right" title="11/18 Exam Review" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="Nov-11.html" class="btn btn-neutral float-left" title="11/11 Advanced Trees" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
