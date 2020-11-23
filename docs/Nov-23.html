@@ -191,8 +191,8 @@
 <h2>Review<a class="headerlink" href="#review" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="threads">
 <h3>Threads<a class="headerlink" href="#threads" title="Permalink to this headline">¶</a></h3>
-<p>The <strong>scheduler</strong> determines which <strong>runnable</strong> thread to run when <strong>context switching occurs.
-**Non-preemptive scheduling</strong> is a more manual type of thread management where context switching happens
+<p>The <strong>scheduler</strong> determines which <strong>runnable</strong> thread to run when <strong>context switching</strong> occurs.
+<strong>Non-preemptive scheduling</strong> is a more manual type of thread management where context switching happens
 when a thread ends or volunteers to stop. <strong>Preemptive</strong> scheduling does thread management via the scheduler.</p>
 <p><code class="code docutils literal notranslate"><span class="pre">t2.join()</span></code> causes the current thread to wait for the thread t2 to end before continuing.</p>
 <p>Use <code class="code docutils literal notranslate"><span class="pre">t2.interrupt()</span></code> to terminate thread t2, note that this only tells t2 that it should stop, t2 has to decide
@@ -226,7 +226,7 @@ access the code in the sync until the thread leaves the sync block.</p>
 
 <span class="c1">// an entire method can be synchronized</span>
 
-<span class="kd">public</span> <span class="kd">synchronized</span> <span class="nf">run</span><span class="p">()</span>
+<span class="kd">public</span> <span class="kd">synchronized</span> <span class="kt">void</span> <span class="nf">run</span><span class="p">()</span>
 <span class="p">{</span>
     <span class="c1">// everything here is synced</span>
 <span class="p">}</span>
@@ -239,9 +239,8 @@ access the code in the sync until the thread leaves the sync block.</p>
 <div><ul class="simple">
 <li><p>Not sharing a lock object between threads</p></li>
 <li><p>Not covering the entirety of the critical section with a sync block</p></li>
-<li><p>Locking a thread in a code block that requires another thread to do a certain action</p></li>
+<li><p>Locking a thread in a code block that requires another thread to do a certain action which cannot be done without the second thread getting into the code block as well (called a deadlock)</p></li>
 </ul>
-<p>which cannot be done without the second thread getting into the code block as well (called a deadlock)</p>
 </div></blockquote>
 </div>
 </div>

@@ -14,7 +14,7 @@ Review
 
 Threads
 ~~~~~~~
-The **scheduler** determines which **runnable** thread to run when **context switching occurs.
+The **scheduler** determines which **runnable** thread to run when **context switching** occurs.
 **Non-preemptive scheduling** is a more manual type of thread management where context switching happens 
 when a thread ends or volunteers to stop. **Preemptive** scheduling does thread management via the scheduler. 
 
@@ -55,7 +55,7 @@ access the code in the sync until the thread leaves the sync block.
 
     // an entire method can be synchronized
 
-    public synchronized run()
+    public synchronized void run()
     {
         // everything here is synced
     }
@@ -67,8 +67,7 @@ Overview of synchronization issues
 
     * Not covering the entirety of the critical section with a sync block
 
-    * Locking a thread in a code block that requires another thread to do a certain action
-    which cannot be done without the second thread getting into the code block as well (called a deadlock)
+    * Locking a thread in a code block that requires another thread to do a certain action which cannot be done without the second thread getting into the code block as well (called a deadlock)
 
 
 Java Streams
