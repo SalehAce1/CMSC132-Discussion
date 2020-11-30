@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>11/23 Java Streams &mdash; CMSC132 Fall 2020 Discussion Notes 1.0.0 documentation</title>
+  <title>11/30 Reflections &mdash; CMSC132 Fall 2020 Discussion Notes 1.0.0 documentation</title>
   
 
   
@@ -36,8 +36,7 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="11/30 Reflections" href="Nov-30.html" />
-    <link rel="prev" title="11/18 Exam Review" href="Nov-18.html" /> 
+    <link rel="prev" title="11/23 Java Streams" href="Nov-23.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -101,18 +100,22 @@
 <li class="toctree-l1"><a class="reference internal" href="Nov-11.html">11/11 Advanced Trees</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Nov-16.html">11/16 RegEx</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Nov-18.html">11/18 Exam Review</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">11/23 Java Streams</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="Nov-23.html">11/23 Java Streams</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">11/30 Reflections</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#reminders">Reminders</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#materials">Materials</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#review">Review</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#threads">Threads</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#synchronization">Synchronization</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#overview-of-synchronization-issues">Overview of synchronization issues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#more-threads">More Threads</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#volatile">Volatile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#wait-and-notify">Wait and Notify</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#thread-safe">Thread-safe</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id1">Java Streams</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Nov-30.html">11/30 Reflections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#java-s-reflections">Java’s Reflections</a></li>
+</ul>
+</li>
 </ul>
 
             
@@ -159,13 +162,13 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>11/23 Java Streams</li>
+      <li>11/30 Reflections</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/Nov-23.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/Nov-30.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -178,77 +181,54 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="java-streams">
-<h1>11/23 Java Streams<a class="headerlink" href="#java-streams" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="reflections">
+<h1>11/30 Reflections<a class="headerlink" href="#reflections" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="reminders">
+<h2>Reminders<a class="headerlink" href="#reminders" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Project 7 due this Tuesday</p></li>
+<li><p>Quiz this Wednesday</p></li>
+</ul>
+</div></blockquote>
+</div>
 <div class="section" id="materials">
 <h2>Materials<a class="headerlink" href="#materials" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><ul class="simple">
-<li><p><a class="reference external" href="http://www.cs.umd.edu/class/fall2020/cmsc132/labs/Week13/JavaStreams.pdf">Notes on Java Streams</a></p></li>
-<li><p><a class="reference external" href="http://www.cs.umd.edu/class/fall2020/cmsc132/labs/Week13/StreamsCodeExample.zip">Java Streams example files</a></p></li>
+<li><p><a class="reference external" href="http://www.cs.umd.edu/class/fall2020/cmsc132/labs/Week14/JavaReflections.pdf">Notes on Java Reflections</a></p></li>
+<li><p><a class="reference external" href="http://www.cs.umd.edu/class/fall2020/cmsc132/labs/Week14/ReflectionLab.zip">Java Reflections example files</a></p></li>
 </ul>
 </div></blockquote>
 </div>
 <div class="section" id="review">
 <h2>Review<a class="headerlink" href="#review" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="threads">
-<h3>Threads<a class="headerlink" href="#threads" title="Permalink to this headline">¶</a></h3>
-<p>The <strong>scheduler</strong> determines which <strong>runnable</strong> thread to run when <strong>context switching</strong> occurs.
-<strong>Non-preemptive scheduling</strong> is a more manual type of thread management where context switching happens
-when a thread ends or volunteers to stop. <strong>Preemptive</strong> scheduling does thread management via the scheduler.</p>
-<p><code class="code docutils literal notranslate"><span class="pre">t2.join()</span></code> causes the current thread to wait for the thread t2 to end before continuing.</p>
-<p>Use <code class="code docutils literal notranslate"><span class="pre">t2.interrupt()</span></code> to terminate thread t2, note that this only tells t2 that it should stop, t2 has to decide
-when to stop on its own.</p>
+<div class="section" id="more-threads">
+<h3>More Threads<a class="headerlink" href="#more-threads" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="volatile">
+<h4>Volatile<a class="headerlink" href="#volatile" title="Permalink to this headline">¶</a></h4>
+<p>When values are being processed, they can be copied into a cache for quicker recovery.
+While multithreading, a thread may try to use the old copy stored in the cache when
+another thread may have updated the real value in memory. To ensure this does not happen,
+use the <strong>volatile</strong> keyword when declaring a variable.</p>
 </div>
-<div class="section" id="synchronization">
-<h3>Synchronization<a class="headerlink" href="#synchronization" title="Permalink to this headline">¶</a></h3>
-<p>A <strong>Data Race</strong> can occur when multiple threads concurrently attempt to access the same resource and
-at least one of them tries to write to it. For example, if one thread is writing to a file but in the
-middle of writing, the thread is switched to another thread that wants to read the file, then this
-new thread will not be reading the updated file.</p>
-<p>We use <strong>synchronization</strong> to protect sensitive parts of our code (<strong>critical section</strong>) from data races.
-The <code class="code docutils literal notranslate"><span class="pre">synchronized(Object</span> <span class="pre">obj)</span> <span class="pre">{}</span></code> code block should be given an object that is shared
-across the threads we want to sync. If a thread is inside the sync then other threads cannot
-access the code in the sync until the thread leaves the sync block.</p>
-<div class="highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="c1">// this can be any object, in this case I used static to ensure</span>
-<span class="c1">// the lock is shared between all threads</span>
-<span class="kd">static</span> <span class="n">Object</span> <span class="n">lockObj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Object</span><span class="p">();</span>
-
-<span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="p">()</span>
-<span class="p">{</span>
-    <span class="c1">// non-sync part of code</span>
-
-    <span class="kd">synchronized</span><span class="p">(</span><span class="n">lockObj</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="c1">// locked code where we access some resource</span>
-    <span class="p">}</span>
-
-    <span class="c1">// non-sync part of code</span>
-<span class="p">}</span>
-
-<span class="c1">// an entire method can be synchronized</span>
-
-<span class="kd">public</span> <span class="kd">synchronized</span> <span class="kt">void</span> <span class="nf">run</span><span class="p">()</span>
-<span class="p">{</span>
-    <span class="c1">// everything here is synced</span>
-<span class="p">}</span>
-</pre></div>
+<div class="section" id="wait-and-notify">
+<h4>Wait and Notify<a class="headerlink" href="#wait-and-notify" title="Permalink to this headline">¶</a></h4>
+<p>When in a synchronization block, a thead can call <strong>wait()</strong> to release the lock and wait
+until another thread notifies that it can proceed. This notification can be done through
+<strong>lockObj.notify()</strong> or <strong>lockObj.notifyAll()</strong> depending on whether we want to notify
+a single thread or all threads that are waiting on that lock object.</p>
+</div>
+<div class="section" id="thread-safe">
+<h4>Thread-safe<a class="headerlink" href="#thread-safe" title="Permalink to this headline">¶</a></h4>
+<p><strong>Thread-safe</strong> code will handle synchronization for you and ensure that if multiple
+threads try to access and write to the code block, a data race will not occur.</p>
 </div>
 </div>
-<div class="section" id="overview-of-synchronization-issues">
-<h3>Overview of synchronization issues<a class="headerlink" href="#overview-of-synchronization-issues" title="Permalink to this headline">¶</a></h3>
-<blockquote>
-<div><ul class="simple">
-<li><p>Not sharing a lock object between threads</p></li>
-<li><p>Not covering the entirety of the critical section with a sync block</p></li>
-<li><p>Locking a thread in a code block that requires another thread to do a certain action which cannot be done without the second thread getting into the code block as well (called a deadlock)</p></li>
-</ul>
-</div></blockquote>
 </div>
-</div>
-<div class="section" id="id1">
-<h2>Java Streams<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p>We went over the slides and code examples listed in the materials section.</p>
+<div class="section" id="java-s-reflections">
+<h2>Java’s Reflections<a class="headerlink" href="#java-s-reflections" title="Permalink to this headline">¶</a></h2>
+<p>We went through the powerpoint and example code found in the materials section.</p>
 </div>
 </div>
 
@@ -260,10 +240,8 @@ access the code in the sync until the thread leaves the sync block.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="Nov-30.html" class="btn btn-neutral float-right" title="11/30 Reflections" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-      
-        <a href="Nov-18.html" class="btn btn-neutral float-left" title="11/18 Exam Review" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="Nov-23.html" class="btn btn-neutral float-left" title="11/23 Java Streams" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
