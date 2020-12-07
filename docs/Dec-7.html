@@ -1,0 +1,324 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>12/7 Review I &mdash; CMSC132 Fall 2020 Discussion Notes 1.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="11/30 Reflections" href="Nov-30.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> CMSC132 Fall 2020 Discussion Notes
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Sep-2.html">9/2 Intro/Using Eclipse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sep-9.html">9/9 Debugging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sep-14.html">9/14 Inheritance and JUnit Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sep-21.html">9/21 Comparators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sep-23.html">9/23 Exam Review</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sep-28.html">9/28 Singletons and Decorators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sep-30.html">9/30 StringBuffer and Command Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Oct-12.html">10/12 UML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Oct-14.html">10/14 UML Continued</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Oct-19.html">10/19 Linked Lists</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Oct-21.html">10/21 Exam Review</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Oct-26.html">10/26 Networking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Oct-28.html">10/28 Hashing Exercise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Nov-2.html">11/2 Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Nov-9.html">11/9 BST Worksheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Nov-11.html">11/11 Advanced Trees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Nov-16.html">11/16 RegEx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Nov-18.html">11/18 Exam Review</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Nov-23.html">11/23 Java Streams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Nov-30.html">11/30 Reflections</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">12/7 Review I</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#last-week-review">Last Week Review</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#graphs">Graphs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#breadth-first-search">Breadth First Search</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#depth-first-search">Depth First Search</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tips-for-traversal">Tips for Traversal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#graph-implementation">Graph Implementation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#dijkstras-algorithm">Dijkstras’ Algorithm</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#final-review">Final Review</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">CMSC132 Fall 2020 Discussion Notes</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>12/7 Review I</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/Dec-7.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="review-i">
+<h1>12/7 Review I<a class="headerlink" href="#review-i" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="last-week-review">
+<h2>Last Week Review<a class="headerlink" href="#last-week-review" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="graphs">
+<h3>Graphs<a class="headerlink" href="#graphs" title="Permalink to this headline">¶</a></h3>
+<p>Graphs are a data structure that connect multiple <strong>nodes</strong>/<strong>vertices</strong> together through <strong>edges</strong>.
+Edges can be directional or not directional. A graph with <strong>cycles</strong> has a path that returns to
+connects a vertex to itself at one point.</p>
+<p><strong>Weighted</strong> edges are edges that have some cost
+associated to them. Every vertex in a <strong>connected</strong> graph has a path to reach every other vertex.</p>
+<div class="section" id="breadth-first-search">
+<h4>Breadth First Search<a class="headerlink" href="#breadth-first-search" title="Permalink to this headline">¶</a></h4>
+<p>From some starting vertex A, visit all of A’s neighbors then once done, visit each of A’s neighbors’ neighbors, and so on.</p>
+</div>
+<div class="section" id="depth-first-search">
+<h4>Depth First Search<a class="headerlink" href="#depth-first-search" title="Permalink to this headline">¶</a></h4>
+<p>From some starting vertex, go through a path of vertices until you reach the end, then backtrack
+until we reach a second path. Repeat until done.</p>
+</div>
+<div class="section" id="tips-for-traversal">
+<h4>Tips for Traversal<a class="headerlink" href="#tips-for-traversal" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><ul class="simple">
+<li><p>Avoid revisiting nodes by keeping a HashSet of all visited nodes.</p></li>
+<li><p>For BFS, use a queue data structure to keep track of which vertex you should visit next.</p></li>
+<li><p>For DFS, use a stack data structure to keep track of which vertex you should visit next.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="graph-implementation">
+<h4>Graph Implementation<a class="headerlink" href="#graph-implementation" title="Permalink to this headline">¶</a></h4>
+<p>One approach is through an <strong>adjacency matrix</strong> which is a 2D array of booleans which tell us
+whether two nodes have an edge. This is faster when we have dense graphs.</p>
+<p>Another approach is the <strong>adjacency list</strong> which is a list of all the vertices where each element
+is a list of that node’s neighbors. This is faster when we have sparser or less dense graphs.</p>
+</div>
+</div>
+<div class="section" id="dijkstras-algorithm">
+<h3>Dijkstras’ Algorithm<a class="headerlink" href="#dijkstras-algorithm" title="Permalink to this headline">¶</a></h3>
+<p>Given a directed, weighted graph, <strong>Dijkstras’ algorithm</strong> allows us to find the shortest path
+from some starting vertex to any other node. The powerpoint visualizes how this algorithm works
+very well so look at that.</p>
+</div>
+</div>
+<div class="section" id="final-review">
+<h2>Final Review<a class="headerlink" href="#final-review" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul>
+<li><p>Linear Data Structures</p>
+<blockquote>
+<div><ul>
+<li><p>Linked Lists: Objects that linearly connect to each other</p>
+<blockquote>
+<div><p>Doubly-Linked lists, dummy nodes, and circular linked list.</p>
+</div></blockquote>
+</li>
+<li><p>Stacks: Lists that add/remove to the end</p></li>
+<li><p>Queues: Lists that add to the end and remove from the front</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><a class="reference external" href="https://salehace1.github.io/CMSC132-Discussion/Oct-26.html?highlight=hash#hashing">Hashing</a></p></li>
+<li><p><a class="reference external" href="https://salehace1.github.io/CMSC132-Discussion/Nov-18.html#sets-maps">Sets and Maps</a></p></li>
+<li><p><a class="reference external" href="https://salehace1.github.io/CMSC132-Discussion/Nov-2.html?#trees">Trees</a></p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://salehace1.github.io/CMSC132-Discussion/Nov-11.html#heaps">Heaps</a></p></li>
+<li><p>Priority Queues</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><a class="reference external" href="https://salehace1.github.io/CMSC132-Discussion/Nov-16.html#threads">Multithreading</a></p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://salehace1.github.io/CMSC132-Discussion/Nov-23.html#threads">Synchronization</a></p></li>
+<li><p><a class="reference external" href="https://salehace1.github.io/CMSC132-Discussion/Nov-30.html#more-threads">More Threads</a></p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="Nov-30.html" class="btn btn-neutral float-left" title="11/30 Reflections" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
