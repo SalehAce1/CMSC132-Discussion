@@ -1,0 +1,330 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>12/14 Review II &mdash; CMSC132 Fall 2020 Discussion Notes 1.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="12/7 Review I" href="Dec-7.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> CMSC132 Fall 2020 Discussion Notes
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Sep-2.html">9/2 Intro/Using Eclipse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sep-9.html">9/9 Debugging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sep-14.html">9/14 Inheritance and JUnit Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sep-21.html">9/21 Comparators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sep-23.html">9/23 Exam Review</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sep-28.html">9/28 Singletons and Decorators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sep-30.html">9/30 StringBuffer and Command Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Oct-12.html">10/12 UML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Oct-14.html">10/14 UML Continued</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Oct-19.html">10/19 Linked Lists</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Oct-21.html">10/21 Exam Review</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Oct-26.html">10/26 Networking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Oct-28.html">10/28 Hashing Exercise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Nov-2.html">11/2 Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Nov-9.html">11/9 BST Worksheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Nov-11.html">11/11 Advanced Trees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Nov-16.html">11/16 RegEx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Nov-18.html">11/18 Exam Review</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Nov-23.html">11/23 Java Streams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Nov-30.html">11/30 Reflections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Dec-7.html">12/7 Review I</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">12/14 Review II</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#last-week-review">Last Week Review</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#sorting-algorithms">Sorting Algorithms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#algorithm-stratigies">Algorithm Stratigies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#effective-java">Effective Java</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#final-review">Final Review</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#generics">Generics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#algorithmic-complexity">Algorithmic Complexity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#recursion">Recursion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#graphs">Graphs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#other">Other</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">CMSC132 Fall 2020 Discussion Notes</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>12/14 Review II</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/Dec-14.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="review-ii">
+<h1>12/14 Review II<a class="headerlink" href="#review-ii" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="last-week-review">
+<h2>Last Week Review<a class="headerlink" href="#last-week-review" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="sorting-algorithms">
+<h3>Sorting Algorithms<a class="headerlink" href="#sorting-algorithms" title="Permalink to this headline">¶</a></h3>
+<p>Let’s look at the slides for <a class="reference external" href="https://www.cs.umd.edu/class/fall2020/cmsc132/lectures/Week15/Sorting.pdf">Sorting Algorithms.</a></p>
+</div>
+<div class="section" id="algorithm-stratigies">
+<h3>Algorithm Stratigies<a class="headerlink" href="#algorithm-stratigies" title="Permalink to this headline">¶</a></h3>
+<p>Let’s look at the slides for <a class="reference external" href="https://www.cs.umd.edu/class/fall2020/cmsc132/lectures/Week15/AlgorithmStrategies.pdf">Algorithm Strategies.</a></p>
+</div>
+<div class="section" id="effective-java">
+<h3>Effective Java<a class="headerlink" href="#effective-java" title="Permalink to this headline">¶</a></h3>
+<p>Let’s look at the slides for <a class="reference external" href="https://www.cs.umd.edu/class/fall2020/cmsc132/lectures/Week15/EffectiveJava.pdf">Effective Java.</a></p>
+</div>
+</div>
+<div class="section" id="final-review">
+<h2>Final Review<a class="headerlink" href="#final-review" title="Permalink to this headline">¶</a></h2>
+<p>Here is the <a class="reference external" href="http://www.cs.umd.edu/class/fall2020/cmsc132/exams/final/">list of topics.</a>
+Keep in mind, the exam will not heavily cover threading. Additionally, there will be emphasis on recursion, so practice writing recursive solutions and
+review recursive problems from quizzes/projects.</p>
+<div class="section" id="generics">
+<h3>Generics<a class="headerlink" href="#generics" title="Permalink to this headline">¶</a></h3>
+<p>To define generic classes, make whatever variable can take on different types a generic type, and adjust methods/instance variables to reflect this.</p>
+</div>
+<div class="section" id="algorithmic-complexity">
+<h3>Algorithmic Complexity<a class="headerlink" href="#algorithmic-complexity" title="Permalink to this headline">¶</a></h3>
+<p>This is a topic that can be tricky, so let’s go over it.</p>
+<blockquote>
+<div><ul>
+<li><p>First step is to identify the <strong>critical section</strong> of the code. Keep in mind that there can be multiple critical sections.</p></li>
+<li><p>Next, loop for any loops that enclose the critical section. This is then used to check how many times the critical section runs.</p></li>
+<li><p>Be careful about loop increments, as this is what determines how many times the loop runs.</p></li>
+<li><p>A few common loops:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>1 to n incremented by i + 1 =&gt; loop executes n times</p></li>
+<li><p>1 to n incremented by 2*i =&gt; loop executes log(n) times</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>We can look back at the <a class="reference external" href="http://www.cs.umd.edu/class/fall2020/cmsc132/lectures/Week9/AlgorithmicComplexityII.pdf">slides</a> to practice.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="recursion">
+<h3>Recursion<a class="headerlink" href="#recursion" title="Permalink to this headline">¶</a></h3>
+<p>To write recursive algorithms, we can follow a few tips:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>First, write the recursive method as if the method already outputs the correct value. This abstraction can help to first get a skeleton
+of the solution.</p></li>
+<li><p>Next, think about what the base case(s) is/are. It is important to cover all possible base cases to avoid infinite recursion.</p></li>
+<li><p>Last tip is to make sure that the recursive call includes some changing variable. This is what allows progress in the algorithm and is what will typically
+lead to a base case.</p></li>
+</ul>
+</div></blockquote>
+<p>For other information on <a class="reference external" href="https://salehace1.github.io/CMSC132-Discussion/Nov-18.html#Recursion">recursion, look here.</a></p>
+</div>
+<div class="section" id="graphs">
+<h3>Graphs<a class="headerlink" href="#graphs" title="Permalink to this headline">¶</a></h3>
+<p>This is a topic that wasn’t covered on the last exam, so be prepared to get questions about graphs.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Dijkstras Algorithm</strong> - An algorithm for a weighted, directed graph that allows us to find the shortest path from any single vertex to all other (reachable) nodes.</p></li>
+<li><p><strong>Breadth First Traversal</strong> - A traversal technique that utilizes a queue data structure to keep track of nodes that need to be vistited.</p></li>
+<li><p><strong>Depth First Traversal</strong> - A traversal technique that utilizes a stack data structure to keep track of nodes that need to be vistited.</p></li>
+</ul>
+</div></blockquote>
+<p>To look at traversal examples, open these <a class="reference external" href="https://www.cs.umd.edu/class/fall2020/cmsc132/lectures/Week14/GraphsTraversal.pdf">slides.</a>
+To look at Dijkstras Algorithm, open these <a class="reference external" href="https://www.cs.umd.edu/class/fall2020/cmsc132/lectures/Week14/DijkstrasAlgorithm.pdf">slides.</a>
+To look at a Dijkstras Algorithm example, open these <a class="reference external" href="https://www.cs.umd.edu/class/fall2020/cmsc132/lectures/Week14/DijkstrasExample.pdf">slides.</a></p>
+</div>
+<div class="section" id="other">
+<h3>Other<a class="headerlink" href="#other" title="Permalink to this headline">¶</a></h3>
+<p>For the rest of today’s lab, we can cover any topics by looking at slides/previous notes pages.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://salehace1.github.io/CMSC132-Discussion/Sep-23.html">Exam 1 Topics</a></p></li>
+<li><p><a class="reference external" href="https://salehace1.github.io/CMSC132-Discussion/Oct-21.html">Exam 2 Topics</a></p></li>
+<li><p><a class="reference external" href="https://salehace1.github.io/CMSC132-Discussion/Dec-7.html">More Final Review</a></p></li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="Dec-7.html" class="btn btn-neutral float-left" title="12/7 Review I" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
