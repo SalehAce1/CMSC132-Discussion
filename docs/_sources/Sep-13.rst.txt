@@ -1,11 +1,11 @@
-9/13/2021 Memory Maps and Quiz
+9/13 Memory Maps and Quiz
 ==============================
 
 Reminders
 ^^^^^^^^^
 * We will be taking a quiz in the last 20 minutes of this class (make sure you are in the correct section)
 * Project 1 is due this Wednesday
-* Project 2 is released this Thursday
+* Project 2 will release this Thursday
 
 Material
 ^^^^^^^^
