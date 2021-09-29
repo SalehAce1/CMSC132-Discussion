@@ -1,0 +1,287 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>9/29 StringBuffer and Command Line &mdash; CMSC132-Discussion 2021 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/dark_mode_css/general.css" type="text/css" />
+  <link rel="stylesheet" href="_static/dark_mode_css/dark.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/dark_mode_js/default_dark.js"></script>
+        <script src="_static/dark_mode_js/theme_switcher.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> CMSC132-Discussion
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="Sep-1.html">9/1 Intro/Using Eclipse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sep-8.html">9/8 Debugging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sep-13.html">9/13 Memory Maps and Quiz</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sep-15.html">9/15 JUnit Tests and Inheritance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sep-20.html">9/20 Inheritance/Exceptions/Comparators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sep-22.html">9/22 Exam Review</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sep-27.html">9/27 Singletons and Decorators</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">CMSC132-Discussion</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>9/29 StringBuffer and Command Line</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/Sep-29.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="stringbuffer-and-command-line">
+<h1>9/29 StringBuffer and Command Line<a class="headerlink" href="#stringbuffer-and-command-line" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="reminders">
+<h2>Reminders<a class="headerlink" href="#reminders" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p>Project 2 is due <strong>TONIGHT</strong>.</p></li>
+<li><p>Project 3 will be released tomorrow.</p></li>
+<li><p>Friday lecture and OH are online.</p></li>
+<li><p>Debugging Quiz is next Monday/Wednesday.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Full info about the quiz on the class webpage.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="material">
+<h2>Material<a class="headerlink" href="#material" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Get the StringBuffer example code <a class="reference external" href="http://www.cs.umd.edu/class/fall2021/cmsc132-030X/labs/Week5/TimeStrCode.zip">from here.</a></p></li>
+<li><p>Get the Command Line Execution code <a class="reference external" href="http://www.cs.umd.edu/class/fall2021/cmsc132-030X/labs/Week5/CommandLine.java">from here.</a></p></li>
+</ul>
+</div>
+<div class="section" id="string-vs-stringbuffer">
+<h2>String vs StringBuffer<a class="headerlink" href="#string-vs-stringbuffer" title="Permalink to this headline">¶</a></h2>
+<p>We are going to look at <a class="reference external" href="http://www.cs.umd.edu/class/fall2021/cmsc132-030X/labs/Week5/TimeStrCode.zip">TimeStrCode.</a>
+This is going to highlight the difference between Strings and StringBuffers, and show that StringBuffer is more efficient than String.</p>
+</div>
+<div class="section" id="command-line-execution">
+<h2>Command Line Execution<a class="headerlink" href="#command-line-execution" title="Permalink to this headline">¶</a></h2>
+<p>We are going to now take a look at how to program in Java without using Eclipse.
+Instead of Eclipse, we are going to use our command line.</p>
+<p>To do this, download the file and then open up command line (Windows) or terminal (MacOS) or shell (Linux).</p>
+<div class="section" id="basic-commands">
+<h3>Basic Commands<a class="headerlink" href="#basic-commands" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p><strong>javac</strong> is the command that compiles a .java file. This will create a .class file.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Format of the command : <code class="code docutils literal notranslate"><span class="pre">javac</span> <span class="pre">FILENAME.java</span></code></p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>java</strong> is the command that runs the program.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Format of the command : <code class="code docutils literal notranslate"><span class="pre">java</span> <span class="pre">FILENAME</span> <span class="pre">args</span></code></p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The FILENAME parameter does not include the file extension.
+Additionally, the args parameter is a list of arguments.
+(For CommandLine.java , args is a set of integers)
+Example: <code class="code docutils literal notranslate"><span class="pre">java</span> <span class="pre">CommandLine</span> <span class="pre">1</span> <span class="pre">2</span> <span class="pre">3</span> <span class="pre">4</span></code></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><em>args</em> represents the <code class="code docutils literal notranslate"><span class="pre">String[]</span> <span class="pre">args</span></code> in the main method header <code class="code docutils literal notranslate"><span class="pre">public</span> <span class="pre">static</span> <span class="pre">void</span> <span class="pre">main(String[]</span> <span class="pre">args)</span></code></p>
+</div>
+<ul>
+<li><p><strong>nano</strong> is the command that opens a very basic editor to write code in your terminal.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Format of the command : <code class="code docutils literal notranslate"><span class="pre">nano</span> <span class="pre">FILENAME.java</span></code></p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Seyed Mohammad Ghaemi and Abhay Patel.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
