@@ -45,7 +45,7 @@ Big-O Notation
 **************
 Big-O represents an upperbound for the time complexity of our algorithm as shown in figure 1.
 
-.. figure:: docs/resources/oct12/1.png
+.. figure:: resources/oct12/1.png
     :scale: 75
     
     Figure 1: Image demonstrates how the O(n) is a continuous function that will 
