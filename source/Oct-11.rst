@@ -3,7 +3,7 @@
 Material
 ^^^^^^^^
 
-* Get this lesson's slides `from here. <https://www.cs.umd.edu/class/fall2020/cmsc132/labs/Week7/UMLIntro.pdf>`_
+* Get this lesson's slides `from here. <http://www.cs.umd.edu/class/fall2021/cmsc132-030X/labs/Week7/UMLIntro.pdf>`_
 
 Review of Two Weeks Ago
 ^^^^^^^^^^^^^^^^^^^^^^^
