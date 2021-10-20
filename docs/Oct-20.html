@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>10/13 UML Continued &mdash; CMSC132-Discussion 2021 documentation</title>
+  <title>10/20 Exam Review &mdash; CMSC132-Discussion 2021 documentation</title>
   
 
   
@@ -45,8 +45,7 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="10/18 Linked Lists" href="Oct-18.html" />
-    <link rel="prev" title="10/12 UML" href="Oct-11.html" /> 
+    <link rel="prev" title="10/18 Linked Lists" href="Oct-18.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -101,19 +100,20 @@
 <li class="toctree-l1"><a class="reference internal" href="Sep-27.html">9/27 Singletons and Decorators</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Sep-29.html">9/29 StringBuffer and Command Line</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Oct-11.html">10/12 UML</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">10/13 UML Continued</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="Oct-13.html">10/13 UML Continued</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Oct-18.html">10/18 Linked Lists</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">10/20 Exam Review</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#reminders">Reminders</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#material">Material</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#week-6-lecture-review">Week 6 Lecture Review</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#collections">Collections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">Exam Review</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#nested-types">Nested Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lambda-expressions">Lambda Expressions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#clone-method">Clone Method</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#initialization-blocks">Initialization Blocks</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#generics">Generics</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#uml-exercise">UML Exercise</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Oct-18.html">10/18 Linked Lists</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Oct-20.html">10/20 Exam Review</a></li>
 </ul>
 
             
@@ -162,13 +162,13 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>10/13 UML Continued</li>
+      <li>10/20 Exam Review</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/Oct-13.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/Oct-20.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -181,25 +181,98 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="uml-continued">
-<h1>10/13 UML Continued<a class="headerlink" href="#uml-continued" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="exam-review">
+<h1>10/20 Exam Review<a class="headerlink" href="#exam-review" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="reminders">
 <h2>Reminders<a class="headerlink" href="#reminders" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>Project 4 was released yesterday (Tuesday)</p></li>
+<ul>
+<li><p>Project 4 is due next Tuesday.</p></li>
+<li><p>Exam 2 is <strong>Friday</strong>.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Find exam information <a class="reference external" href="https://www.cs.umd.edu/class/fall2021/cmsc132-030X/exams/exam2/">here.</a></p></li>
+</ul>
+</div></blockquote>
+</li>
 </ul>
 </div>
-<div class="section" id="material">
-<h2>Material<a class="headerlink" href="#material" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h2>Exam Review<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>Get the exercise <a class="reference external" href="http://www.cs.umd.edu/class/fall2021/cmsc132-030X/labs/Week7/DesignExercise.pdf">from here.</a></p></li>
+<li><p>Revisit 9/22 discussion page to look over concepts from Exam 1 (topics can carry over)</p></li>
+</ul>
+<div class="section" id="nested-types">
+<h3>Nested Types<a class="headerlink" href="#nested-types" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Slides for Nested Types are <a class="reference external" href="https://www.cs.umd.edu/class/fall2021/cmsc132-030X/lectures/Week4/NestedTypes.pdf">here.</a></p></li>
 </ul>
 </div>
-<div class="section" id="week-6-lecture-review">
-<h2>Week 6 Lecture Review<a class="headerlink" href="#week-6-lecture-review" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="collections">
-<h3>Collections<a class="headerlink" href="#collections" title="Permalink to this headline">¶</a></h3>
-<p>We will take a look at the <a class="reference external" href="https://www.cs.umd.edu/class/fall2021/cmsc132-030X/lectures/Week6/Collections.pdf">slides</a></p>
+<div class="section" id="lambda-expressions">
+<h3>Lambda Expressions<a class="headerlink" href="#lambda-expressions" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>A very concise approach to define an anonymous class instance.</p></li>
+<li><p>Lambda expressions are objects, and the compiler treats them as objects created from an anonymous inner class.</p></li>
+<li><p>Lambda expressions require a <strong>functional interface</strong>, which is an interface with only 1 abstract method.</p></li>
+</ul>
+<div class="highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Expressions syntax</span>
+<span class="p">(</span><span class="n">type1</span> <span class="n">parameter1</span><span class="p">,</span> <span class="n">type2</span> <span class="n">parameter2</span><span class="p">,</span> <span class="p">...</span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">expression</span>
+<span class="c1">// For example</span>
+<span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">;</span>
+
+<span class="c1">// Statements syntax</span>
+<span class="p">(</span><span class="n">type1</span> <span class="n">parameter1</span><span class="p">,</span> <span class="n">type2</span> <span class="n">parameter2</span><span class="p">,</span> <span class="p">...</span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="p">{</span><span class="n">statements</span><span class="p">;};</span>
+<span class="c1">// For example</span>
+<span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">{</span> <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">;</span> <span class="p">};</span>
+
+<span class="c1">// Additionally, you can leave out the types as the compiler can infer the type</span>
+<span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">;</span>
+
+<span class="c1">// For just 1 parameter without an explicit type, you do not need parenthesis</span>
+<span class="n">x</span> <span class="o">-&gt;</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">2</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="clone-method">
+<h3>Clone Method<a class="headerlink" href="#clone-method" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p>Object class provides the <code class="code docutils literal notranslate"><span class="pre">clone()</span></code> method which provides shallow copying.</p></li>
+<li><p>To write the <code class="code docutils literal notranslate"><span class="pre">clone()</span></code> method for a particular class:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Call the Object class’ <code class="code docutils literal notranslate"><span class="pre">clone()</span></code> method.</p></li>
+<li><p>Any primitive types are taken care of by the Object’s <code class="code docutils literal notranslate"><span class="pre">clone()</span></code> call.</p></li>
+<li><p>Any fields that are not primitives/references to immutable objects need to be duplicated.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>Covariant Return Type</strong> - When you define the return type to be a subtype of the return type of the method being overriden.</p></li>
+<li><p>A class must implement the <code class="code docutils literal notranslate"><span class="pre">Cloneable</span></code> interface if it calls the Object class <code class="code docutils literal notranslate"><span class="pre">clone()</span></code> method.</p></li>
+<li><p>The <code class="code docutils literal notranslate"><span class="pre">CloneNotSupportedException</span></code> is thrown is a class calls the <code class="code docutils literal notranslate"><span class="pre">clone()</span></code> method but does not implement the interface.</p></li>
+</ul>
+</div>
+<div class="section" id="initialization-blocks">
+<h3>Initialization Blocks<a class="headerlink" href="#initialization-blocks" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Blocks of code used to initialize static and instance variables for a class.</p></li>
+<li><p><strong>Static Initialization Blocks</strong> happen when the particular object is created (at the beginning of the call to the constructor).</p></li>
+<li><p>The order of initialization blocks goes Static -&gt; Non Static -&gt; Constructor</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Static Initialization blocks are only executed once.
+So if you create more than 1 instance of the class,
+the static blocks only run the first time, but the other
+blocks run for every instance of the class.</p>
+</div>
+<div class="highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Syntax for initialization blocks</span>
+
+<span class="kd">class</span> <span class="nc">Foo</span> <span class="p">{</span>
+    <span class="kd">static</span> <span class="p">{</span> <span class="n">A</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="p">}</span>
+
+    <span class="p">{</span> <span class="n">A</span> <span class="o">=</span> <span class="mi">2</span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="generics">
 <h3>Generics<a class="headerlink" href="#generics" title="Permalink to this headline">¶</a></h3>
@@ -246,12 +319,6 @@
 </div>
 </div>
 </div>
-<div class="section" id="uml-exercise">
-<h2>UML Exercise<a class="headerlink" href="#uml-exercise" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>Take some time to work on the UML exercise</p></li>
-</ul>
-</div>
 </div>
 
 
@@ -260,8 +327,7 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="Oct-18.html" class="btn btn-neutral float-right" title="10/18 Linked Lists" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="Oct-11.html" class="btn btn-neutral float-left" title="10/12 UML" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Oct-18.html" class="btn btn-neutral float-left" title="10/18 Linked Lists" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
