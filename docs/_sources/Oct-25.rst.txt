@@ -1,0 +1,74 @@
+10/25 Networking
+================
+
+Reminders
+^^^^^^^^^
+
+* Project 4 is due tomorrow.
+
+Material
+^^^^^^^^
+
+* `Networking Slides <http://www.cs.umd.edu/class/fall2021/cmsc132-030X/labs/Week9/Networking.pdf>`_
+
+* `Packet Switching Video <https://youtu.be/vSlcoQowe9I>`_
+
+* `Networking Project File <http://www.cs.umd.edu/class/fall2021/cmsc132-030X/labs/Week9/NetworkingCode.zip>`_
+
+Last Week Review
+^^^^^^^^^^^^^^^^
+We learned about Maps last week.
+
+
+Sets
+~~~~
+
+**Sets** are collections of elements without duplicates.
+
+* They do not have ordering.
+
+* Sets offer the ability to quickly find and remove elements quickly (ideally does not require searching through all the elements)
+
+* Concrete Set Classes: 
+
+    * :code:`HashSet`, where elements must implement the :code:`hashCode()` method.
+    
+    * :code:`LinkedHashSet`, which is a :code:`HashSet` supporting the insertion order of elements.
+    
+    * :code:`TreeSet`, which requires elements to be :code:`Comparable` or provide a :code:`Comparator`. This data structure ensures the elements are in sorted order.
+
+Maps
+~~~~
+**Maps** are a data structure that links a unique list of keys to different values,
+allowing for O(1) access to these values. Think of a regular array and how it maps unique keys
+(natural numbers) to values of our choice. Maps work the same way accept we choose the type of our keys. 
+Since keys must be unique and can be unordered, we use the **Set** data structure to store them.
+
+Like Sets, Maps come in three major types in Java as well. The **TreeMap** class holds a map 
+with sorted keys, **LinkedHashMap** has its keys in insertion order, and **HashMap** has no order. 
+
+Methods you should know:
+
+    * :code:`void put(K key, V val)`
+
+    * :code:`V get(Object key)`
+
+    * :code:`int size()`
+
+    * :code:`boolean containsKey(Object key)`
+
+    * :code:`boolean containsValue(Object val)`
+
+    * :code:`Set<K> keySet()`
+
+    * :code:`Collection<V> values()`
+
+
+Networking
+^^^^^^^^^^
+We went over the networking slides and the example project. To run the example, be sure to 
+run WisdomServer before WisdomClient otherwise the client doesn't have anything to connect to. 
+
+.. note:: 
+    If the error :code:`java.net.BindException: Address already in use: bind` occurs, the port
+    you are trying to use is already in use. 
