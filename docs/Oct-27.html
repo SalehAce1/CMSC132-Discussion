@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>9/8 Debugging &mdash; CMSC132-Discussion 2021 documentation</title>
+  <title>10/27 Maps Worksheet &mdash; CMSC132-Discussion 2021 documentation</title>
   
 
   
@@ -45,8 +45,7 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="9/13 Memory Maps and Quiz" href="Sep-13.html" />
-    <link rel="prev" title="9/1 Intro/Using Eclipse" href="Sep-1.html" /> 
+    <link rel="prev" title="10/25 Networking" href="Oct-25.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -93,12 +92,7 @@
             
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Sep-1.html">9/1 Intro/Using Eclipse</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">9/8 Debugging</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#reminders-checkups">Reminders/Checkups</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#review">Review</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id1">Debugging</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="Sep-8.html">9/8 Debugging</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Sep-13.html">9/13 Memory Maps and Quiz</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Sep-15.html">9/15 JUnit Tests and Inheritance</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Sep-20.html">9/20 Inheritance/Exceptions/Comparators</a></li>
@@ -110,7 +104,12 @@
 <li class="toctree-l1"><a class="reference internal" href="Oct-18.html">10/18 Linked Lists</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Oct-20.html">10/20 Exam Review</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Oct-25.html">10/25 Networking</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Oct-27.html">10/27 Maps Worksheet</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">10/27 Maps Worksheet</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#reminders">Reminders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#material">Material</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-rest-of-class">The Rest of Class</a></li>
+</ul>
+</li>
 </ul>
 
             
@@ -159,13 +158,13 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>9/8 Debugging</li>
+      <li>10/27 Maps Worksheet</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/Sep-8.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/Oct-27.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -178,98 +177,23 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="debugging">
-<h1>9/8 Debugging<a class="headerlink" href="#debugging" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="reminders-checkups">
-<h2>Reminders/Checkups<a class="headerlink" href="#reminders-checkups" title="Permalink to this headline">¶</a></h2>
-<ul>
-<li><p>Can everyone access Piazza?</p></li>
-<li><p>Has everyone installed Eclipse?</p></li>
-<li><p>Quiz next week (Monday, the 13th of Sep)</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>20 minutes long</p></li>
-<li><p>At the beginning of discussion</p></li>
-<li><p>You <strong>must</strong> go to your correct discussion to take the quiz</p></li>
-</ul>
-</div></blockquote>
-</li>
-<li><p>Project questions?</p></li>
-</ul>
-</div>
-<div class="section" id="review">
-<h2>Review<a class="headerlink" href="#review" title="Permalink to this headline">¶</a></h2>
-<ul>
-<li><p>Abstraction: Give high level representation to user</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>Procedural: Hide algorithm detail behind action</p></li>
-<li><p>Data: Hide how data is represented</p></li>
-</ul>
-</div></blockquote>
-</li>
-<li><p>Classes versus Interfaces</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>Use interfaces to define a general template that you want shared across classes</p></li>
-<li><p>Interface methods have only prototypes (with some exceptions)</p></li>
-</ul>
-</div></blockquote>
-</li>
-<li><p>Generics –&gt; List&lt;T&gt; lst</p></li>
-<li><p>Enumerated types</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>enum Color {Red, Green, Blue}</p></li>
-<li><p>values(), valueOf(String s)</p></li>
-</ul>
-</div></blockquote>
-</li>
-<li><p>boolean equals(Object other)</p>
-<blockquote>
-<div><ol class="arabic simple">
-<li><p>Check if they share the same reference with ==</p></li>
-<li><p>Check if they are not the same type with instanceof</p></li>
-<li><p>Cast other to the correct type</p></li>
-<li><p>Compare</p></li>
-</ol>
-</div></blockquote>
-</li>
-<li><p>Comparables</p>
-<blockquote>
-<div><ul>
-<li><p>implements Comparable&lt;ClassType&gt;</p></li>
-<li><p>int compareTo(T other)</p></li>
-<li><p>Used in functions like Collections.sort()</p></li>
-<li><p>In a.compareTo(b), function should return</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>Negative int if a &lt; b</p></li>
-<li><p>Positive int if a &gt; b</p></li>
-<li><p>0 if a == b</p></li>
-</ul>
-</div></blockquote>
-</li>
-</ul>
-</div></blockquote>
-</li>
-</ul>
-</div>
-<div class="section" id="id1">
-<h2>Debugging<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p>We went over the Debugging.zip file from the Schedule tab on the main site.</p>
-<p>Topics we covered were:</p>
+  <div class="section" id="maps-worksheet">
+<h1>10/27 Maps Worksheet<a class="headerlink" href="#maps-worksheet" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="reminders">
+<h2>Reminders<a class="headerlink" href="#reminders" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>Entering Eclipse’s Debugging perspective</p></li>
-<li><p>Using step into, step over, and step return</p></li>
-<li><p>Setting breakpoints</p></li>
-<li><p>Seeing contents of variables after entering breakpoints</p></li>
-<li><p>Looking at the stack in the debugging menu</p></li>
+<li><p>Quiz next Wednesday.</p></li>
 </ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Quiz 2 (not the quiz 1 you are taking next week) will be on debugging in Eclipse.</p>
 </div>
+<div class="section" id="material">
+<h2>Material<a class="headerlink" href="#material" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.cs.umd.edu/class/fall2021/cmsc132-030X/labs/Week9/MapsWorksheet.pdf">Today’s Worksheet</a></p></li>
+</ul>
+</div>
+<div class="section" id="the-rest-of-class">
+<h2>The Rest of Class<a class="headerlink" href="#the-rest-of-class" title="Permalink to this headline">¶</a></h2>
+<p>We spent the rest of class working on the worksheet from the materials section.</p>
 </div>
 </div>
 
@@ -279,8 +203,7 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="Sep-13.html" class="btn btn-neutral float-right" title="9/13 Memory Maps and Quiz" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="Sep-1.html" class="btn btn-neutral float-left" title="9/1 Intro/Using Eclipse" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Oct-25.html" class="btn btn-neutral float-left" title="10/25 Networking" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

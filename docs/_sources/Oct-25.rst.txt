@@ -17,7 +17,7 @@ Material
 
 Last Week Review
 ^^^^^^^^^^^^^^^^
-We learned about Maps last week.
+We learned about Sets and Maps last week.
 
 
 Sets
