@@ -26,3 +26,4 @@ This site will contain notes for CMSC132 lab section of Fall 2021.
    Oct-25
    Oct-27
    Nov-1
+   Nov-8
