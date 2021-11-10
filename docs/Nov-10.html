@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>11/8 Polymorphic Lists &mdash; CMSC132-Discussion 2021 documentation</title>
+  <title>11/10 Sorted Polymorphic Lists &mdash; CMSC132-Discussion 2021 documentation</title>
   
 
   
@@ -45,8 +45,7 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="11/10 Sorted Polymorphic Lists" href="Nov-10.html" />
-    <link rel="prev" title="11/1 Quiz 3 Practice" href="Nov-1.html" /> 
+    <link rel="prev" title="11/8 Polymorphic Lists" href="Nov-8.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -107,17 +106,13 @@
 <li class="toctree-l1"><a class="reference internal" href="Oct-25.html">10/25 Networking</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Oct-27.html">10/27 Maps Worksheet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Nov-1.html">11/1 Quiz 3 Practice</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">11/8 Polymorphic Lists</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="Nov-8.html">11/8 Polymorphic Lists</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">11/10 Sorted Polymorphic Lists</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#reminders">Reminders</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#material">Material</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#last-week-review">Last Week Review</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#hashing">Hashing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#polymorphic-linked-list">Polymorphic Linked List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sorted-polymorphic-linked-list">Sorted Polymorphic Linked List</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="Nov-10.html">11/10 Sorted Polymorphic Lists</a></li>
 </ul>
 
             
@@ -166,13 +161,13 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>11/8 Polymorphic Lists</li>
+      <li>11/10 Sorted Polymorphic Lists</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/Nov-8.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/Nov-10.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -185,12 +180,12 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="polymorphic-lists">
-<h1>11/8 Polymorphic Lists<a class="headerlink" href="#polymorphic-lists" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="sorted-polymorphic-lists">
+<h1>11/10 Sorted Polymorphic Lists<a class="headerlink" href="#sorted-polymorphic-lists" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="reminders">
 <h2>Reminders<a class="headerlink" href="#reminders" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>Project 5 is due Tuesday.</p></li>
+<li><p>Project 6 is due Thursday.</p></li>
 </ul>
 </div>
 <div class="section" id="material">
@@ -199,41 +194,9 @@
 <li><p><a class="reference external" href="http://www.cs.umd.edu/class/fall2021/cmsc132-030X/labs/Week11/PolymorphicListsTreesCode.zip">Code file</a></p></li>
 </ul>
 </div>
-<div class="section" id="last-week-review">
-<h2>Last Week Review<a class="headerlink" href="#last-week-review" title="Permalink to this headline">¶</a></h2>
-<p>We learned about hashing last week.</p>
-<div class="section" id="hashing">
-<h3>Hashing<a class="headerlink" href="#hashing" title="Permalink to this headline">¶</a></h3>
-<p>Hashing allows us to access a value in a list at O(1) time by using a <strong>Hash Function</strong>
-to ideally turn each of the values of our list into a unique number. Depending on the hash
-function, not all values will get a unique hash code, in which case, a <strong>collision</strong> occurs.
-The best hash functions minimize collisions but in cases where they do happen, there are several
-approaches that can be taken.</p>
-<p>A few approaches for handling collisions:</p>
-<ul>
-<li><p><strong>Open Addressing</strong>: Look for another open spot on the table.</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>Linear probing: Place the value into the next open spot.</p></li>
-<li><p>Quadratic probing: If at index k = j, go to index k + j^2, this prevents clustering.</p></li>
-</ul>
-</div></blockquote>
-</li>
-<li><p><strong>Separate Chaining</strong>: Each element can store multiple values.</p></li>
-</ul>
-<p><strong>Java’s Hash Code Contract</strong>: <code class="code docutils literal notranslate"><span class="pre">a.equals(b)</span> <span class="pre">=&gt;</span> <span class="pre">a.hashCode()</span> <span class="pre">==</span> <span class="pre">b.hashCode()</span></code> but the inverse and converse are not true.</p>
-</div>
-<div class="section" id="polymorphic-linked-list">
-<h3>Polymorphic Linked List<a class="headerlink" href="#polymorphic-linked-list" title="Permalink to this headline">¶</a></h3>
-<p>This is a Linked List where instead of defining the end of a list using null, we will define it using a class
-called <code class="code docutils literal notranslate"><span class="pre">EmptyList</span></code>. The structure of our code can be recursively defined as <code class="code docutils literal notranslate"><span class="pre">List</span> <span class="pre">=</span> <span class="pre">NoneEmptyList(data,</span> <span class="pre">List)</span> <span class="pre">or</span> <span class="pre">EmptyList</span></code></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This isn’t the most efficient or best way to implement a Linked List.
-This is meant to demonstrate how using polymorphism can reduce complexity of code.</p>
-</div>
-<p>The rest of discussion was spent working through the code file.</p>
-</div>
+<div class="section" id="sorted-polymorphic-linked-list">
+<h2>Sorted Polymorphic Linked List<a class="headerlink" href="#sorted-polymorphic-linked-list" title="Permalink to this headline">¶</a></h2>
+<p>We went through the material for the Sorted Linked Lists.</p>
 </div>
 </div>
 
@@ -243,8 +206,7 @@ This is meant to demonstrate how using polymorphism can reduce complexity of cod
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="Nov-10.html" class="btn btn-neutral float-right" title="11/10 Sorted Polymorphic Lists" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="Nov-1.html" class="btn btn-neutral float-left" title="11/1 Quiz 3 Practice" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Nov-8.html" class="btn btn-neutral float-left" title="11/8 Polymorphic Lists" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
