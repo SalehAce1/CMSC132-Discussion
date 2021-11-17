@@ -304,7 +304,7 @@ Collision Handling:
 
 * `Link to hashing just to be safe <https://www.cs.umd.edu/class/fall2021/cmsc132-030X/lectures/Week8/Hashing.pdf>`_
 
-* Now we'll go through a more detailed example of handling collisions, created by another TA, Matthew Simmons:
+* Now we'll go through a more detailed example of handling collisions, created by another TA, **Matthew Simmons**:
 
     * Seperate Chaining:
 
@@ -334,7 +334,7 @@ Collision Handling:
         Cons: 
 
         * Slower Big-O (If everything is in one linkedlist, search is still O(n), not O(1))
-        
+
         * Need to use Linked Lists
 
     * Open Addressing:
