@@ -325,17 +325,16 @@ Collision Handling:
 
         Where this method calls LinkedList.add(), which is what you implemented in your project (addToFront / addToEnd - doesn't matter which).
         Delete() and search() are similarly short.
+
         Pros:
+            * Shorter code!
 
-        * Shorter code!
-
-        * No "need" to resize the table! (It would still be good to)
+            * No "need" to resize the table! (It would still be good to)
         
         Cons: 
+            * Slower Big-O (If everything is in one linkedlist, search is still O(n), not O(1))
 
-        * Slower Big-O (If everything is in one linkedlist, search is still O(n), not O(1))
-
-        * Need to use Linked Lists
+            * Need to use Linked Lists
 
     * Open Addressing:
 
@@ -385,16 +384,14 @@ Collision Handling:
             }
 
         Pros:
+            * Fast!
 
-        * Fast!
-
-        * No linked lists!
+            * No linked lists!
         
         Cons: 
+            * Resizing is yucky
 
-        * Resizing is yucky
-
-        * Dealing with collisions is lame
+            * Dealing with collisions is lame
 
 Sets/Maps
 ~~~~~~~~~

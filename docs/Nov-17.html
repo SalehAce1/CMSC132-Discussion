@@ -516,17 +516,19 @@ Example:</p>
 </pre></div>
 </div>
 <p>Where this method calls LinkedList.add(), which is what you implemented in your project (addToFront / addToEnd - doesn’t matter which).
-Delete() and search() are similarly short.
-Pros:</p>
-<ul class="simple">
+Delete() and search() are similarly short.</p>
+<dl class="simple">
+<dt>Pros:</dt><dd><ul class="simple">
 <li><p>Shorter code!</p></li>
 <li><p>No “need” to resize the table! (It would still be good to)</p></li>
 </ul>
-<p>Cons:</p>
-<ul class="simple">
+</dd>
+<dt>Cons:</dt><dd><ul class="simple">
 <li><p>Slower Big-O (If everything is in one linkedlist, search is still O(n), not O(1))</p></li>
 <li><p>Need to use Linked Lists</p></li>
 </ul>
+</dd>
+</dl>
 </div></blockquote>
 </li>
 <li><p>Open Addressing:</p>
@@ -570,16 +572,18 @@ The most common way to do this is to just double the size, then put the value ba
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>Pros:</p>
-<ul class="simple">
+<dl class="simple">
+<dt>Pros:</dt><dd><ul class="simple">
 <li><p>Fast!</p></li>
 <li><p>No linked lists!</p></li>
 </ul>
-<p>Cons:</p>
-<ul class="simple">
+</dd>
+<dt>Cons:</dt><dd><ul class="simple">
 <li><p>Resizing is yucky</p></li>
 <li><p>Dealing with collisions is lame</p></li>
 </ul>
+</dd>
+</dl>
 </div></blockquote>
 </li>
 </ul>
