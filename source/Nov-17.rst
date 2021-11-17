@@ -4,7 +4,7 @@
 Reminders
 ^^^^^^^^^
 
-    * Third Exam is on Friday 11/16.
+    * Third Exam is on Friday 11/19.
 
 Exam Logistics
 ^^^^^^^^^^^^^^
