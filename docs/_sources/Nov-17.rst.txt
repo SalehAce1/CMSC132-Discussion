@@ -126,162 +126,165 @@ Linear Data Structures
 
     * Begin writing your solution as if the recursive method already performs the correct work. This can simplify the thought process and make it clear what code needs to be written.
 
-Another TA **Matthew Simmons**, was kind enough to make a bunch of examples to get us comfortable with Java's Abstract Data Types!
+* Another TA, **Matthew Simmons**, was kind enough to make a bunch of examples to get us comfortable with Java's Abstract Data Types!
 
-Stack Questions:
-Say we want to reverse a Stack (and don't care about modifying the original). It can be done like so:
+    * Stack Questions:
 
-.. code-block:: Java
+        Say we want to reverse a Stack (and don't care about modifying the original). It can be done like so:
 
-    public Stack<T> reverse(Stack<T> stack) {
-        Stack<T> newStack = new Stack<T>();
-        while (!stack.empty()) {
-            newStack.push(stack.pop());
-        }
-        return newStack;
-    }
+        .. code-block:: Java
 
-Now, what if we wish to preserve the original?
-Double the Stack, then reverse one of them (with modifying)!
+            public Stack<T> reverse(Stack<T> stack) {
+                Stack<T> newStack = new Stack<T>();
+                while (!stack.empty()) {
+                    newStack.push(stack.pop());
+                }
+                return newStack;
+            }
 
-.. code-block:: Java
+        Now, what if we wish to preserve the original?
+        Double the Stack, then reverse one of them (with modifying)!
 
-    public Stack<T> reverse(Stack<T> stack) {
-        Stack<T> newStack = new Stack<T>();
-        Stack<T> tempStack = new Stack<T>();
-        while (!stack.empty()) {
-            T value = stack.pop();
-            newStack.push(value);
-            tempStack.push(value);
-        }
-        while (!tempStack.empty()) {
-            stack.push(tempStack.pop()); // Reverse the reversed - back to normal!
-        }
-        return newStack;
-    }
+        .. code-block:: Java
 
-Now, what if we want the size?
-Similar!
+            public Stack<T> reverse(Stack<T> stack) {
+                Stack<T> newStack = new Stack<T>();
+                Stack<T> tempStack = new Stack<T>();
+                while (!stack.empty()) {
+                    T value = stack.pop();
+                    newStack.push(value);
+                    tempStack.push(value);
+                }
+                while (!tempStack.empty()) {
+                    stack.push(tempStack.pop()); // Reverse the reversed - back to normal!
+                }
+                return newStack;
+            }
 
-.. code-block:: Java
+        Now, what if we want the size?
+        Similar!
 
-    public int size(Stack<T> stack) {
-        int count = 0;
-        Stack<T> tempStack = reverse(reverse(stack)); // Fancy way to make a copy :)
-        while (!tempStack.empty()) {
-            tempStack.pop();
-            count++;
-        }
+        .. code-block:: Java
 
-        return count;
-    }
+            public int size(Stack<T> stack) {
+                int count = 0;
+                Stack<T> tempStack = reverse(reverse(stack)); // Fancy way to make a copy :)
+                while (!tempStack.empty()) {
+                    tempStack.pop();
+                    count++;
+                }
+
+                return count;
+            }
 
 ------------------------------------------------------------
 
-Queue Questions:
-Let's try to get the size of a queue (pretend there's no size() method already)
-Idea: poll() until there's nothing left will give count - also ensure we don't modify queue!
+    * Queue Questions:
 
-.. code-block:: Java
+        Let's try to get the size of a queue (pretend there's no size() method already)
+        Idea: poll() until there's nothing left will give count - also ensure we don't modify queue!
 
-    public int size(Queue<T> queue) {
-        int count = 0;
-        Queue<T> tempQueue = new ArrayDeque<T>(); // Queue is an interface so we can't instantiate it - but an ArrayList is-a Queue!
-        while(queue.peek() != null) {
-            tempQueue.add(queue.poll()); // Adds in order - FIFO still - tempQueue will be old queue!
-            count++;
-        }
-        queue = tempQueue; // Queue keeps its elements in order!
-        return count;
-    }
+        .. code-block:: Java
 
-Reversing is still cool - can we do that?  
-Looks weird, but sure! We must add beginning with the last element, then work backwards (sounds like recursion to me!)
+            public int size(Queue<T> queue) {
+                int count = 0;
+                Queue<T> tempQueue = new ArrayDeque<T>(); // Queue is an interface so we can't instantiate it - but an ArrayList is-a Queue!
+                while(queue.peek() != null) {
+                    tempQueue.add(queue.poll()); // Adds in order - FIFO still - tempQueue will be old queue!
+                    count++;
+                }
+                queue = tempQueue; // Queue keeps its elements in order!
+                return count;
+            }
 
-.. code-block:: Java
+        Reversing is still cool - can we do that?  
+        Looks weird, but sure! We must add beginning with the last element, then work backwards (sounds like recursion to me!)
 
-    public Queue<T> reverse(Queue<T> queue) {
-        Queue<T> newQueue = new ArrayDeque<>();
-        reverseAux(queue, newQueue);
-        return newQueue;
-    }
+        .. code-block:: Java
 
-    private void reverseAux(Queue<T> oldQueue, Queue<T> reversedQueue) {
-        if (oldQueue.peek() != null) {
-            T value = oldQueue.poll();
-            reverseAux(oldQueue, reversedQueue); // Same call as before - is this an infinite loop?
-            reversedQueue.add(value);
-        }
-    }
+            public Queue<T> reverse(Queue<T> queue) {
+                Queue<T> newQueue = new ArrayDeque<>();
+                reverseAux(queue, newQueue);
+                return newQueue;
+            }
 
-Now, to do this without modifying the original (exercise for you - you'll need two helpers instead of two whiles in the Stack example)
+            private void reverseAux(Queue<T> oldQueue, Queue<T> reversedQueue) {
+                if (oldQueue.peek() != null) {
+                    T value = oldQueue.poll();
+                    reverseAux(oldQueue, reversedQueue); // Same call as before - is this an infinite loop?
+                    reversedQueue.add(value);
+                }
+            }
+
+        Now, to do this without modifying the original (exercise for you - you'll need two helpers instead of two whiles in the Stack example)
 
 ------------------------------------------------------
 
-How about Deques? (Pronounced Decks - I don't know why)
-Deques are a combination of a Stack and a Queue - so implementations as above work (changing method names) for size and reverse!
-If Queue is like a linked list, Deque is like a doubly-linked list! (next and prev Node)
-Makes things nice when you need both ends
-Ex: Swap the first and last values of a Queue, Stack, and Deque.
-Queue: Very sad iterations :( Same with Stack
-But Deque:
+    * How about Deques? (Pronounced Decks - I don't know why)
 
-.. code-block:: Java
+        Deques are a combination of a Stack and a Queue - so implementations as above work (changing method names) for size and reverse!
+        If Queue is like a linked list, Deque is like a doubly-linked list! (next and prev Node)
+        Makes things nice when you need both ends
+        Ex: Swap the first and last values of a Queue, Stack, and Deque.
+        Queue: Very sad iterations :( Same with Stack
+        But Deque:
 
-    public void swapFirstLast(Deque<T> deque) { // Assume big enough to do this
-        T first = deque.pollFirst();
-        T last = deque.pollLast();
+        .. code-block:: Java
 
-        deque.addFirst(last);
-        deque.addLast(first);
-    }
+            public void swapFirstLast(Deque<T> deque) { // Assume big enough to do this
+                T first = deque.pollFirst();
+                T last = deque.pollLast();
 
-Exercise: This can cause issues if there are too few elements. Fix it up!
-Here's something a little more deque-sized:
-Given a Deque, re-order it so we alternate 1, n, 2, n-1, ...
-Ex: 1, 2, 3, 4, 5 -> 1, 5, 2, 4, 3
-
-.. code-block:: Java
-
-    // Recursion
-    public Deque<T> reorder(Deque<T> deque) {
-        Deque<T> newDeque = new ArrayDeque<>(); // LinkedList implements Deque
-        reorderAux(deque, newDeque, true);
-        return newDeque;
-    }
-
-Idea: Boolean will alternate each call for if we poll from front or back!
-
-.. code-block:: Java
-
-    private void reorderAux(Deque<T> oldDeque, Deque<T> newDeque, boolean fromFront) {
-        if (oldDeque.size() > 0) {
-            if (fromFront) {
-                newDeque.addLast(oldDeque.pollFirst());
-            } else {
-                newDeque.addLast(oldDeque.pollLast());
+                deque.addFirst(last);
+                deque.addLast(first);
             }
-            reorderAux(oldDeque, newDeque, !fromFront); // Remember, oldDeque is already changed since pollFirst() /
-                                                        // pollLast() removes one!
-        }
-    }
 
-.. code-block:: Java
+        Exercise: This can cause issues if there are too few elements. Fix it up!
+        Here's something a little more deque-sized:
+        Given a Deque, re-order it so we alternate 1, n, 2, n-1, ...
+        Ex: 1, 2, 3, 4, 5 -> 1, 5, 2, 4, 3
 
-    // Iteration
-    public Deque<T> reorder(Deque<T> oldDeque) {
-        Deque<T> newDeque = new ArrayDeque<>();
-        boolean fromFront = true;
-        while (oldDeque.size() > 0) {
-            if (fromFront) {
-                newDeque.addLast(oldDeque.pollFirst());
-            } else {
-                newDeque.addLast(oldDeque.pollFirst());
+        .. code-block:: Java
+
+            // Recursion
+            public Deque<T> reorder(Deque<T> deque) {
+                Deque<T> newDeque = new ArrayDeque<>(); // LinkedList implements Deque
+                reorderAux(deque, newDeque, true);
+                return newDeque;
             }
-            fromFront = !fromFront; // Flips direction each time
-        }
-        return newDeque;
-    }
+
+        Idea: Boolean will alternate each call for if we poll from front or back!
+
+        .. code-block:: Java
+
+            private void reorderAux(Deque<T> oldDeque, Deque<T> newDeque, boolean fromFront) {
+                if (oldDeque.size() > 0) {
+                    if (fromFront) {
+                        newDeque.addLast(oldDeque.pollFirst());
+                    } else {
+                        newDeque.addLast(oldDeque.pollLast());
+                    }
+                    reorderAux(oldDeque, newDeque, !fromFront); // Remember, oldDeque is already changed since pollFirst() /
+                                                                // pollLast() removes one!
+                }
+            }
+
+        .. code-block:: Java
+
+            // Iteration
+            public Deque<T> reorder(Deque<T> oldDeque) {
+                Deque<T> newDeque = new ArrayDeque<>();
+                boolean fromFront = true;
+                while (oldDeque.size() > 0) {
+                    if (fromFront) {
+                        newDeque.addLast(oldDeque.pollFirst());
+                    } else {
+                        newDeque.addLast(oldDeque.pollFirst());
+                    }
+                    fromFront = !fromFront; // Flips direction each time
+                }
+                return newDeque;
+            }
 
 Hashing
 ~~~~~~~
@@ -325,10 +328,13 @@ Collision Handling:
         Pros:
 
         * Shorter code!
+
         * No "need" to resize the table! (It would still be good to)
         
         Cons: 
+
         * Slower Big-O (If everything is in one linkedlist, search is still O(n), not O(1))
+        
         * Need to use Linked Lists
 
     * Open Addressing:
@@ -379,11 +385,15 @@ Collision Handling:
             }
 
         Pros:
+
         * Fast!
+
         * No linked lists!
         
         Cons: 
+
         * Resizing is yucky
+
         * Dealing with collisions is lame
 
 Sets/Maps

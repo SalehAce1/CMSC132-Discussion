@@ -321,10 +321,12 @@
 </ul>
 </div></blockquote>
 </li>
-</ul>
-<p>Another TA <strong>Matthew Simmons</strong>, was kind enough to make a bunch of examples to get us comfortable with Java’s Abstract Data Types!</p>
-<p>Stack Questions:
-Say we want to reverse a Stack (and don’t care about modifying the original). It can be done like so:</p>
+<li><p>Another TA, <strong>Matthew Simmons</strong>, was kind enough to make a bunch of examples to get us comfortable with Java’s Abstract Data Types!</p>
+<blockquote>
+<div><ul>
+<li><p>Stack Questions:</p>
+<blockquote>
+<div><p>Say we want to reverse a Stack (and don’t care about modifying the original). It can be done like so:</p>
 <div class="highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="n">Stack</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="nf">reverse</span><span class="p">(</span><span class="n">Stack</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">stack</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">Stack</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">newStack</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Stack</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">();</span>
     <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">stack</span><span class="p">.</span><span class="na">empty</span><span class="p">())</span> <span class="p">{</span>
@@ -365,9 +367,18 @@ Similar!</p>
 <span class="p">}</span>
 </pre></div>
 </div>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
 <hr class="docutils" />
-<p>Queue Questions:
-Let’s try to get the size of a queue (pretend there’s no size() method already)
+<blockquote>
+<div><ul>
+<li><p>Queue Questions:</p>
+<blockquote>
+<div><p>Let’s try to get the size of a queue (pretend there’s no size() method already)
 Idea: poll() until there’s nothing left will give count - also ensure we don’t modify queue!</p>
 <div class="highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">int</span> <span class="nf">size</span><span class="p">(</span><span class="n">Queue</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">queue</span><span class="p">)</span> <span class="p">{</span>
     <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
@@ -399,9 +410,16 @@ Looks weird, but sure! We must add beginning with the last element, then work ba
 </pre></div>
 </div>
 <p>Now, to do this without modifying the original (exercise for you - you’ll need two helpers instead of two whiles in the Stack example)</p>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
 <hr class="docutils" />
-<p>How about Deques? (Pronounced Decks - I don’t know why)
-Deques are a combination of a Stack and a Queue - so implementations as above work (changing method names) for size and reverse!
+<blockquote>
+<div><ul>
+<li><p>How about Deques? (Pronounced Decks - I don’t know why)</p>
+<blockquote>
+<div><p>Deques are a combination of a Stack and a Queue - so implementations as above work (changing method names) for size and reverse!
 If Queue is like a linked list, Deque is like a doubly-linked list! (next and prev Node)
 Makes things nice when you need both ends
 Ex: Swap the first and last values of a Queue, Stack, and Deque.
@@ -458,6 +476,10 @@ Ex: 1, 2, 3, 4, 5 -&gt; 1, 5, 2, 4, 3</p>
 <span class="p">}</span>
 </pre></div>
 </div>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
 </div>
 <div class="section" id="hashing">
 <h3>Hashing<a class="headerlink" href="#hashing" title="Permalink to this headline">¶</a></h3>
@@ -500,9 +522,11 @@ Pros:</p>
 <li><p>Shorter code!</p></li>
 <li><p>No “need” to resize the table! (It would still be good to)</p></li>
 </ul>
-<p>Cons:
-* Slower Big-O (If everything is in one linkedlist, search is still O(n), not O(1))
-* Need to use Linked Lists</p>
+<p>Cons:</p>
+<ul class="simple">
+<li><p>Slower Big-O (If everything is in one linkedlist, search is still O(n), not O(1))</p></li>
+<li><p>Need to use Linked Lists</p></li>
+</ul>
 </div></blockquote>
 </li>
 <li><p>Open Addressing:</p>
@@ -546,12 +570,16 @@ The most common way to do this is to just double the size, then put the value ba
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>Pros:
-* Fast!
-* No linked lists!</p>
-<p>Cons:
-* Resizing is yucky
-* Dealing with collisions is lame</p>
+<p>Pros:</p>
+<ul class="simple">
+<li><p>Fast!</p></li>
+<li><p>No linked lists!</p></li>
+</ul>
+<p>Cons:</p>
+<ul class="simple">
+<li><p>Resizing is yucky</p></li>
+<li><p>Dealing with collisions is lame</p></li>
+</ul>
 </div></blockquote>
 </li>
 </ul>
