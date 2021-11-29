@@ -1,77 +1,38 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>9/20 Inheritance/Exceptions/Comparators &mdash; CMSC132-Discussion 2021 documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/dark_mode_css/general.css" type="text/css" />
-  <link rel="stylesheet" href="_static/dark_mode_css/dark.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/dark_mode_css/general.css" type="text/css" />
+      <link rel="stylesheet" href="_static/dark_mode_css/dark.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
         <script src="_static/dark_mode_js/default_dark.js"></script>
         <script src="_static/dark_mode_js/theme_switcher.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
-    
+    <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="9/22 Exam Review" href="Sep-22.html" />
     <link rel="prev" title="9/15 JUnit Tests and Inheritance" href="Sep-15.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="index.html" class="icon icon-home"> CMSC132-Discussion
-          
-
-          
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -79,18 +40,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Sep-1.html">9/1 Intro/Using Eclipse</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Sep-8.html">9/8 Debugging</a></li>
@@ -131,93 +81,53 @@
 <li class="toctree-l1"><a class="reference internal" href="Nov-10.html">11/10 Sorted Polymorphic Lists</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Nov-15.html">11/15 LL/Hashing Wks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Nov-17.html">11/17 Exam 3 Review</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Nov-29.html">11/29 Heap Wksheet</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">CMSC132-Discussion</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-        
       <li>9/20 Inheritance/Exceptions/Comparators</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="_sources/Sep-20.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="inheritance-exceptions-comparators">
-<h1>9/20 Inheritance/Exceptions/Comparators<a class="headerlink" href="#inheritance-exceptions-comparators" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="reminders">
-<h2>Reminders<a class="headerlink" href="#reminders" title="Permalink to this headline">¶</a></h2>
+             
+  <section id="inheritance-exceptions-comparators">
+<h1>9/20 Inheritance/Exceptions/Comparators<a class="headerlink" href="#inheritance-exceptions-comparators" title="Permalink to this headline"></a></h1>
+<section id="reminders">
+<h2>Reminders<a class="headerlink" href="#reminders" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>First exam is this Friday (9/24)</p></li>
 <li><p>The second project was released last Thursday and is due Wednesday next week (9/29)</p></li>
 </ul>
-</div>
-<div class="section" id="material">
-<h2>Material<a class="headerlink" href="#material" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="material">
+<h2>Material<a class="headerlink" href="#material" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Get the Comparator code example we will use later <a class="reference external" href="http://www.cs.umd.edu/class/fall2021/cmsc132-030X/labs/Week4/ComparatorCode.zip">from here.</a></p></li>
 </ul>
-</div>
-<div class="section" id="last-week-review">
-<h2>Last Week Review<a class="headerlink" href="#last-week-review" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="last-week-review">
+<h2>Last Week Review<a class="headerlink" href="#last-week-review" title="Permalink to this headline"></a></h2>
 <p>Lecture covered more inheritance, debugging, and exceptions.</p>
-<div class="section" id="abstract">
-<h3>Abstract<a class="headerlink" href="#abstract" title="Permalink to this headline">¶</a></h3>
+<section id="abstract">
+<h3>Abstract<a class="headerlink" href="#abstract" title="Permalink to this headline"></a></h3>
 <p><strong>Abstract classes</strong> essentially allow us to make a class that cannot be instantiated.
 Use this when you wish to create an inheritance hierarchy where the parent cannot stand by itself
 but it contains methods/fields that all of its children need to share.</p>
@@ -225,17 +135,17 @@ but it contains methods/fields that all of its children need to share.</p>
 Calling <em>draw()</em> on <em>Shape</em> does not make sense so we make it abstract while still allowing the children
 to inherit and use the <em>draw()</em>.</p>
 <p><strong>Abstract methods</strong> are methods that do not have an implementation.</p>
-<div class="section" id="abstract-vs-interface-use">
-<h4>Abstract vs. Interface Use<a class="headerlink" href="#abstract-vs-interface-use" title="Permalink to this headline">¶</a></h4>
+<section id="abstract-vs-interface-use">
+<h4>Abstract vs. Interface Use<a class="headerlink" href="#abstract-vs-interface-use" title="Permalink to this headline"></a></h4>
 <p>Use abstract classes when the class’s children are directly linked in terms of implementation with each other
 like in the case of <em>Shape</em> and its children.</p>
 <p>Use interfaces when the classes implementing the interface don’t need to be related to each other. For example,
 a <em>MusicPlayer</em> class can implement the interface <em>Comparable</em> and a <em>Student</em> class can as well. The implementation of
 <em>Student</em> and <em>MusicPlayer</em> are not related at all.</p>
-</div>
-</div>
-<div class="section" id="inheritance-vs-composition">
-<h3>Inheritance vs. Composition<a class="headerlink" href="#inheritance-vs-composition" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="inheritance-vs-composition">
+<h3>Inheritance vs. Composition<a class="headerlink" href="#inheritance-vs-composition" title="Permalink to this headline"></a></h3>
 <p>Inheritance should be used to create an <em>is a</em> relationship so for example, <em>Student is a Person</em>.
 On the other hand, <strong>Composition</strong> should be utilized when we want to say an object contains another object.
 For example, <em>Student has a Phone</em> would occur when the <em>Student</em> class contains a <em>Phone</em> object within it.</p>
@@ -243,33 +153,33 @@ For example, <em>Student has a Phone</em> would occur when the <em>Student</em> 
 <p class="admonition-title">Note</p>
 <p>Composition is less messy compared to inheritance so use it whenever possible.</p>
 </div>
-</div>
-<div class="section" id="multiple-inheritance">
-<h3>Multiple Inheritance<a class="headerlink" href="#multiple-inheritance" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="multiple-inheritance">
+<h3>Multiple Inheritance<a class="headerlink" href="#multiple-inheritance" title="Permalink to this headline"></a></h3>
 <p><strong>Multiple Inheritance</strong> is when a class has more than one parent. This is not allowed in Java.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>You can achieve similar results to multiple inheritance by implementing (implementing multiple interfaces is allowed).</p>
 </div>
-</div>
-<div class="section" id="final">
-<h3>Final<a class="headerlink" href="#final" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="final">
+<h3>Final<a class="headerlink" href="#final" title="Permalink to this headline"></a></h3>
 <p>The <strong>final</strong> keyword has three major use-cases.</p>
 <ol class="arabic simple">
 <li><p>A final variable means that the variable is a constant</p></li>
 <li><p>A final method cannot be overriden.</p></li>
 <li><p>A final class cannot be extended.</p></li>
 </ol>
-</div>
-<div class="section" id="exceptions">
-<h3>Exceptions<a class="headerlink" href="#exceptions" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="exceptions">
+<h3>Exceptions<a class="headerlink" href="#exceptions" title="Permalink to this headline"></a></h3>
 <p><strong>Run-time exceptions</strong> happen when unexpected behavior occurs while your code is running.
 For example, if your program divides by zero during a calculation it will throw an exception.</p>
 <p>When an exception occurs, the method or stack it occured in sends the exception to the previous
 stack, this action is called <strong>propagating</strong>. If the exception propagates upto the main stack,
 the program will crash.</p>
-<div class="section" id="handling-exceptions">
-<h4>Handling Exceptions<a class="headerlink" href="#handling-exceptions" title="Permalink to this headline">¶</a></h4>
+<section id="handling-exceptions">
+<h4>Handling Exceptions<a class="headerlink" href="#handling-exceptions" title="Permalink to this headline"></a></h4>
 <p>Preventing an exception from reaching the main stack is called <strong>handling the exception</strong> or <strong>catching</strong> it.
 We can use a try-catch to do this.</p>
 <div class="highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="k">try</span>
@@ -289,19 +199,19 @@ We can use a try-catch to do this.</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="checked-vs-unchecked">
-<h4>Checked vs Unchecked<a class="headerlink" href="#checked-vs-unchecked" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="checked-vs-unchecked">
+<h4>Checked vs Unchecked<a class="headerlink" href="#checked-vs-unchecked" title="Permalink to this headline"></a></h4>
 <p><strong>Unchecked exceptions</strong> are all exceptions caused by bad code, you must fix these.</p>
 <p><strong>Checked exceptions</strong> are exceptions that are outside of your power. If you’re reading a file,
 there might be an <em>IOException</em>. Methods that can potentially cause this type of error require you to
 do one of two things. Either catch these potential errors with a <em>try and catch</em> or
 declare that the code may thrown an exception.</p>
-</div>
-</div>
-</div>
-<div class="section" id="comparators">
-<h2>Comparators<a class="headerlink" href="#comparators" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+</section>
+<section id="comparators">
+<h2>Comparators<a class="headerlink" href="#comparators" title="Permalink to this headline"></a></h2>
 <p><a class="reference external" href="https://docs.oracle.com/en/java/javase/13/docs/api/java.base/java/util/Comparator.html">Comparators</a> are an interface in Java
 that allow us to provide alternative ways of comparing the same class as opposed to the <em>Comparable</em> interface which only
 allows for a single method for comparing.</p>
@@ -330,55 +240,38 @@ Looking at the above example, if we had an ArrayList of students <em>studList</e
 <code class="code docutils literal notranslate"><span class="pre">Collections.sort(studList,</span> <span class="pre">new</span> <span class="pre">StudentComparator());</span></code>.</p>
 </div>
 <p>We spent the rest of class looking at the Comparator code example from the materials section.</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="Sep-22.html" class="btn btn-neutral float-right" title="9/22 Exam Review" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="Sep-15.html" class="btn btn-neutral float-left" title="9/15 JUnit Tests and Inheritance" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Sep-22.html" class="btn btn-neutral float-right" title="9/22 Exam Review" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2021, Seyed Mohammad Ghaemi and Abhay Patel.
-
-    </p>
+    <p>&#169; Copyright 2021, Seyed Mohammad Ghaemi and Abhay Patel.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

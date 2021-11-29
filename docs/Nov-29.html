@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>11/29 Heap Wksheet &mdash; CMSC132-Discussion 2021 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/dark_mode_css/general.css" type="text/css" />
+      <link rel="stylesheet" href="_static/dark_mode_css/dark.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/dark_mode_js/default_dark.js"></script>
+        <script src="_static/dark_mode_js/theme_switcher.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="11/17 Exam 3 Review" href="Nov-17.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> CMSC132-Discussion
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Sep-1.html">9/1 Intro/Using Eclipse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sep-8.html">9/8 Debugging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sep-13.html">9/13 Memory Maps and Quiz</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sep-15.html">9/15 JUnit Tests and Inheritance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sep-20.html">9/20 Inheritance/Exceptions/Comparators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sep-22.html">9/22 Exam Review</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sep-27.html">9/27 Singletons and Decorators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sep-29.html">9/29 StringBuffer and Command Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Oct-11.html">10/12 UML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Oct-13.html">10/13 UML Continued</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Oct-18.html">10/18 Linked Lists</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Oct-20.html">10/20 Exam Review</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Oct-25.html">10/25 Networking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Oct-27.html">10/27 Maps Worksheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Nov-1.html">11/1 Quiz 3 Practice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Nov-8.html">11/8 Polymorphic Lists</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Nov-10.html">11/10 Sorted Polymorphic Lists</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Nov-15.html">11/15 LL/Hashing Wks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Nov-17.html">11/17 Exam 3 Review</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">11/29 Heap Wksheet</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#reminders">Reminders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#materials">Materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#review">Review</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#threads">Threads</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#approach-1-to-threading">Approach 1 to threading</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#approach-2-to-thread-preferred">Approach 2 to thread (preferred)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#scheduler">Scheduler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#synchronization">Synchronization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#overview-of-synchronization-issues">Overview of synchronization issues</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#heap-worksheet">Heap Worksheet</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">CMSC132-Discussion</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>11/29 Heap Wksheet</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Nov-29.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="heap-wksheet">
+<h1>11/29 Heap Wksheet<a class="headerlink" href="#heap-wksheet" title="Permalink to this headline"></a></h1>
+<section id="reminders">
+<h2>Reminders<a class="headerlink" href="#reminders" title="Permalink to this headline"></a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Quiz 4 this Wednesday!</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="materials">
+<h2>Materials<a class="headerlink" href="#materials" title="Permalink to this headline"></a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://www.cs.umd.edu/class/fall2021/cmsc132-030X/labs/Week14/HeapExercise.pdf">Heap exercise</a></p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="review">
+<h2>Review<a class="headerlink" href="#review" title="Permalink to this headline"></a></h2>
+<section id="threads">
+<h3>Threads<a class="headerlink" href="#threads" title="Permalink to this headline"></a></h3>
+<p><strong>Threading</strong> is a technique used to give the illusion of parallelism such that it appears multiple processes are
+being done at the same time. In reality there is a proccess called the <strong>scheduler</strong> that
+keeps track of the context of the task being processed and switches between different tasks to create multitasking.</p>
+<section id="approach-1-to-threading">
+<h4>Approach 1 to threading<a class="headerlink" href="#approach-1-to-threading" title="Permalink to this headline"></a></h4>
+<div class="highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyThread</span> <span class="kd">extends</span> <span class="n">Thread</span>
+<span class="p">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="c1">// Thread task</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="c1">// ...</span>
+<span class="n">MyThread</span> <span class="n">t</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MyThread</span><span class="p">();</span>
+<span class="n">t</span><span class="p">.</span><span class="na">start</span><span class="p">();</span> <span class="c1">// Begin thread</span>
+<span class="n">t</span><span class="p">.</span><span class="na">join</span><span class="p">()</span> <span class="c1">// Stop current thread until thread t terminates</span>
+</pre></div>
+</div>
+</section>
+<section id="approach-2-to-thread-preferred">
+<h4>Approach 2 to thread (preferred)<a class="headerlink" href="#approach-2-to-thread-preferred" title="Permalink to this headline"></a></h4>
+<div class="highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Implement the Runnable interface and give it to the thread</span>
+<span class="n">Thread</span> <span class="n">t</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Thread</span><span class="p">(()</span> <span class="o">-&gt;</span>
+<span class="p">{</span>
+    <span class="c1">// Thread code</span>
+<span class="p">});</span>
+<span class="n">t</span><span class="p">.</span><span class="na">start</span><span class="p">();</span> <span class="c1">// Begin thread</span>
+<span class="n">t</span><span class="p">.</span><span class="na">join</span><span class="p">()</span> <span class="c1">// Stop current thread until thread t terminates</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="scheduler">
+<h3>Scheduler<a class="headerlink" href="#scheduler" title="Permalink to this headline"></a></h3>
+<p>The <strong>scheduler</strong> determines which <strong>runnable</strong> thread to run when <strong>context switching</strong> occurs.
+<strong>Non-preemptive scheduling</strong> is a more manual type of thread management where context switching happens
+when a thread ends or volunteers to stop. <strong>Preemptive</strong> scheduling does thread management via the scheduler.</p>
+<p><code class="code docutils literal notranslate"><span class="pre">t2.join()</span></code> causes the current thread to wait for the thread t2 to end before continuing.</p>
+<p>Use <code class="code docutils literal notranslate"><span class="pre">t2.interrupt()</span></code> to terminate thread t2, note that this only tells t2 that it should stop, t2 has to decide
+when to stop on its own.</p>
+</section>
+<section id="synchronization">
+<h3>Synchronization<a class="headerlink" href="#synchronization" title="Permalink to this headline"></a></h3>
+<p>A <strong>Data Race</strong> can occur when multiple threads concurrently attempt to access the same resource and
+at least one of them tries to write to it. For example, if one thread is writing to a file but in the
+middle of writing, the thread is switched to another thread that wants to read the file, then this
+new thread will not be reading the updated file.</p>
+<p>We use <strong>synchronization</strong> to protect sensitive parts of our code (<strong>critical section</strong>) from data races.
+The <code class="code docutils literal notranslate"><span class="pre">synchronized(Object</span> <span class="pre">obj)</span> <span class="pre">{}</span></code> code block should be given an object that is shared
+across the threads we want to sync. If a thread is inside the sync then other threads cannot
+access the code in the sync until the thread leaves the sync block.</p>
+<div class="highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="c1">// this can be any object, in this case I used static to ensure</span>
+<span class="c1">// the lock is shared between all threads</span>
+<span class="kd">static</span> <span class="n">Object</span> <span class="n">lockObj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Object</span><span class="p">();</span>
+
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="c1">// non-sync part of code</span>
+
+    <span class="kd">synchronized</span><span class="p">(</span><span class="n">lockObj</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">// locked code where we access some resource</span>
+    <span class="p">}</span>
+
+    <span class="c1">// non-sync part of code</span>
+<span class="p">}</span>
+
+<span class="c1">// an entire method can be synchronized</span>
+
+<span class="kd">public</span> <span class="kd">synchronized</span> <span class="kt">void</span> <span class="nf">run</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="c1">// everything here is synced</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="overview-of-synchronization-issues">
+<h3>Overview of synchronization issues<a class="headerlink" href="#overview-of-synchronization-issues" title="Permalink to this headline"></a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Not sharing a lock object between threads</p></li>
+<li><p>Not covering the entirety of the critical section with a sync block</p></li>
+<li><p>Locking a thread in a code block that requires another thread to do a certain action which cannot be done without the second thread getting into the code block as well (called a deadlock)</p></li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+<section id="heap-worksheet">
+<h2>Heap Worksheet<a class="headerlink" href="#heap-worksheet" title="Permalink to this headline"></a></h2>
+<p>We went through the heap worksheet.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Nov-17.html" class="btn btn-neutral float-left" title="11/17 Exam 3 Review" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Seyed Mohammad Ghaemi and Abhay Patel.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
