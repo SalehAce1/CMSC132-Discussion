@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>10/27 Maps Worksheet &mdash; CMSC132-Discussion 2021 documentation</title>
+  <title>12/6 Reflections &mdash; CMSC132-Discussion 2021 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/dark_mode_css/general.css" type="text/css" />
@@ -22,8 +22,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="11/1 Quiz 3 Practice" href="Nov-1.html" />
-    <link rel="prev" title="10/25 Networking" href="Oct-25.html" /> 
+    <link rel="prev" title="12/1 Quiz 4" href="Dec-1.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -55,12 +54,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Oct-18.html">10/18 Linked Lists</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Oct-20.html">10/20 Exam Review</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Oct-25.html">10/25 Networking</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">10/27 Maps Worksheet</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#reminders">Reminders</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#material">Material</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#the-rest-of-class">The Rest of Class</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="Oct-27.html">10/27 Maps Worksheet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Nov-1.html">11/1 Quiz 3 Practice</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Nov-8.html">11/8 Polymorphic Lists</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Nov-10.html">11/10 Sorted Polymorphic Lists</a></li>
@@ -68,7 +62,23 @@
 <li class="toctree-l1"><a class="reference internal" href="Nov-17.html">11/17 Exam 3 Review</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Nov-29.html">11/29 Heap Wksheet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Dec-1.html">12/1 Quiz 4</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Dec-6.html">12/6 Reflections</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">12/6 Reflections</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#reminders">Reminders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#materials">Materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#last-week-review">Last Week Review</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#graphs">Graphs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#breadth-first-search">Breadth First Search</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#depth-first-search">Depth First Search</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tips-for-traversal">Tips for Traversal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#graph-implementation">Graph Implementation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#dijkstras-algorithm">Dijkstras’ Algorithm</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#java-s-reflections">Java’s Reflections</a></li>
+</ul>
+</li>
 </ul>
 
         </div>
@@ -85,9 +95,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>10/27 Maps Worksheet</li>
+      <li>12/6 Reflections</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="_sources/Oct-27.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/Dec-6.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -95,25 +105,72 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="maps-worksheet">
-<h1>10/27 Maps Worksheet<a class="headerlink" href="#maps-worksheet" title="Permalink to this headline"></a></h1>
+  <section id="reflections">
+<h1>12/6 Reflections<a class="headerlink" href="#reflections" title="Permalink to this headline"></a></h1>
 <section id="reminders">
 <h2>Reminders<a class="headerlink" href="#reminders" title="Permalink to this headline"></a></h2>
-<ul class="simple">
-<li><p>Quiz next Wednesday.</p></li>
+<blockquote>
+<div><ul class="simple">
+<li><p>Project 7 due today.</p></li>
+<li><p>Quiz this Wednesday</p></li>
 </ul>
+</div></blockquote>
 </section>
-<section id="material">
-<h2>Material<a class="headerlink" href="#material" title="Permalink to this headline"></a></h2>
-<ul class="simple">
-<li><p><a class="reference external" href="http://www.cs.umd.edu/class/fall2021/cmsc132-030X/labs/Week9/MapsWorksheet.pdf">Today’s Worksheet</a></p></li>
+<section id="materials">
+<h2>Materials<a class="headerlink" href="#materials" title="Permalink to this headline"></a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="http://www.cs.umd.edu/class/fall2021/cmsc132-030X/labs/Week15/JavaReflections.pdf">Notes on Java Reflections</a></p></li>
+<li><p><a class="reference external" href="http://www.cs.umd.edu/class/fall2021/cmsc132-030X/labs/Week15/ReflectionLab.zip">Java Reflections example files</a></p></li>
 </ul>
+</div></blockquote>
 </section>
-<section id="the-rest-of-class">
-<h2>The Rest of Class<a class="headerlink" href="#the-rest-of-class" title="Permalink to this headline"></a></h2>
-<p>The WordFrequencyCounter.java file mentioned in the first problem can be found either from the SetsMapsCode.zip link in the class webpage’s schedule section
-or <a class="reference external" href="https://www.cs.umd.edu/class/fall2021/cmsc132-030X/lectures/Week8/SetsMapsCode.zip">you can download it from here as well.</a></p>
-<p>We spent the rest of class working on the worksheet from the materials section.</p>
+<section id="last-week-review">
+<h2>Last Week Review<a class="headerlink" href="#last-week-review" title="Permalink to this headline"></a></h2>
+<section id="graphs">
+<h3>Graphs<a class="headerlink" href="#graphs" title="Permalink to this headline"></a></h3>
+<p>Graphs are a data structure that connect multiple <strong>nodes</strong>/<strong>vertices</strong> together through <strong>edges</strong>.
+Edges can be directional or not directional. A graph with <strong>cycles</strong> has a path that returns to
+connects a vertex to itself at one point.</p>
+<p><strong>Weighted</strong> edges are edges that have some cost
+associated to them. Every vertex in a <strong>connected</strong> graph has a path to reach every other vertex.</p>
+<section id="breadth-first-search">
+<h4>Breadth First Search<a class="headerlink" href="#breadth-first-search" title="Permalink to this headline"></a></h4>
+<p>From some starting vertex A, visit all of A’s neighbors then once done, visit each of A’s neighbors’ neighbors, and so on.</p>
+</section>
+<section id="depth-first-search">
+<h4>Depth First Search<a class="headerlink" href="#depth-first-search" title="Permalink to this headline"></a></h4>
+<p>From some starting vertex, go through a path of vertices until you reach the end, then backtrack
+until we reach a second path. Repeat until done.</p>
+</section>
+<section id="tips-for-traversal">
+<h4>Tips for Traversal<a class="headerlink" href="#tips-for-traversal" title="Permalink to this headline"></a></h4>
+<blockquote>
+<div><ul class="simple">
+<li><p>Avoid revisiting nodes by keeping a HashSet of all visited nodes.</p></li>
+<li><p>For BFS, use a queue data structure to keep track of which vertex you should visit next.</p></li>
+<li><p>For DFS, use a stack data structure to keep track of which vertex you should visit next.</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="graph-implementation">
+<h4>Graph Implementation<a class="headerlink" href="#graph-implementation" title="Permalink to this headline"></a></h4>
+<p>One approach is through an <strong>adjacency matrix</strong> which is a 2D array of booleans which tell us
+whether two nodes have an edge. This is faster when we have dense graphs.</p>
+<p>Another approach is the <strong>adjacency list</strong> which is a list of all the vertices where each element
+is a list of that node’s neighbors. This is faster when we have sparser or less dense graphs.</p>
+</section>
+</section>
+<section id="dijkstras-algorithm">
+<h3>Dijkstras’ Algorithm<a class="headerlink" href="#dijkstras-algorithm" title="Permalink to this headline"></a></h3>
+<p>Given a directed, weighted graph, <strong>Dijkstras’ algorithm</strong> allows us to find the shortest path
+from some starting vertex to any other node. The powerpoint visualizes how this algorithm works
+very well so look at that.</p>
+</section>
+</section>
+<section id="java-s-reflections">
+<h2>Java’s Reflections<a class="headerlink" href="#java-s-reflections" title="Permalink to this headline"></a></h2>
+<p>We went through the powerpoint and example code found in the materials section.</p>
 </section>
 </section>
 
@@ -121,8 +178,7 @@ or <a class="reference external" href="https://www.cs.umd.edu/class/fall2021/cms
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="Oct-25.html" class="btn btn-neutral float-left" title="10/25 Networking" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="Nov-1.html" class="btn btn-neutral float-right" title="11/1 Quiz 3 Practice" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="Dec-1.html" class="btn btn-neutral float-left" title="12/1 Quiz 4" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
