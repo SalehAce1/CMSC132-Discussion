@@ -26,7 +26,7 @@ Final Review I
 
 Exam I content
 ~~~~~~~~~~~~~~
-`Link to page <https://salehace1.github.io/CMSC132-Discussion/Oct-20.html>`_
+`Link to page <https://salehace1.github.io/CMSC132-Discussion/Sep-22.html>`_
 
 Exam II content 
 ~~~~~~~~~~~~~~~
